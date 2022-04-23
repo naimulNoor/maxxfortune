@@ -14,7 +14,7 @@ import 'package:tokenapp/ui/common_widgets/positive_button.dart';
 import 'package:tokenapp/ui/container/UIConstants/Colors.dart';
 import 'package:tokenapp/ui/container/UIConstants/GSWidgetStyles.dart';
 import 'package:tokenapp/ui/container/UIConstants/Strings.dart';
-import 'package:tokenapp/ui/container/contact_us/ContactUsController.dart';
+
 import 'package:tokenapp/utils/constants.dart';
 import 'package:tokenapp/utils/dimens.dart';
 import 'package:tokenapp/utils/reges_format.dart';
@@ -38,7 +38,7 @@ class _LoginPageViewState extends State<ForgetPassThreePage> {
 
 
 
-  ContactUsController controller=new ContactUsController();
+
 
   @override
   void initState() {

@@ -10,12 +10,6 @@ import 'package:tokenapp/ui/app/info/refer/refer_page.dart';
 import 'package:tokenapp/ui/container/UIConstants/Colors.dart';
 import 'package:tokenapp/ui/container/UIConstants/GSWidgetStyles.dart';
 import 'package:tokenapp/ui/container/UIConstants/Strings.dart';
-import 'package:tokenapp/ui/container/book_a_bus/book_a_bus.dart';
-import 'package:tokenapp/ui/container/faq/FaqController.dart';
-import 'package:tokenapp/ui/container/lost_and_found/lost_and_found.dart';
-import 'package:tokenapp/ui/container/our_service/our_service.dart';
-import 'package:tokenapp/ui/container/privacy_and_concern/privacy_and_concern.dart';
-import 'package:tokenapp/ui/container/terms_and_conditions/terms_and_conditions.dart';
 import 'package:tokenapp/widgets/widget_button.dart';
 import 'package:tokenapp/widgets/widget_textfrom_field.dart';
 import 'package:screenshot/screenshot.dart';
@@ -29,7 +23,6 @@ class ContactPage extends StatefulWidget {
 
 class _FaqViewState extends State<ContactPage> {
   late TextEditingController emailController;
-  FaqController controller=new FaqController();
 
   @override
   void initState() {
@@ -121,13 +114,6 @@ class _FaqViewState extends State<ContactPage> {
         ),
       ),
     );
-  }
-  Future<FaqModel> getFaqData() async{
-
-    var response = await controller.FaqServiceProvider();
-    print("response${response.data}");
-    return response;
-
   }
 }
 

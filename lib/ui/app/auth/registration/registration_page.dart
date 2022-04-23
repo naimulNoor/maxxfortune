@@ -1,28 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:get/get.dart';
 import 'package:tokenapp/app_style.dart';
-import 'package:tokenapp/base/widget/custom_filled_button.dart';
-import 'package:tokenapp/base/widget/custom_text_form_field.dart';
-import 'package:tokenapp/constants.dart';
-import 'package:tokenapp/data/models/MessageResponse.dart';
-import 'package:tokenapp/data/models/container/contactus/ContactUsModel.dart';
-import 'package:tokenapp/data/models/container/contactus/ContactUsResponse.dart';
+
 import 'package:tokenapp/ui/app/auth/registration/registration_page_two.dart';
-import 'package:tokenapp/ui/common_widgets/positive_button.dart';
-import 'package:tokenapp/ui/container/UIConstants/Colors.dart';
-import 'package:tokenapp/ui/container/UIConstants/GSWidgetStyles.dart';
+
 import 'package:tokenapp/ui/container/UIConstants/Strings.dart';
-import 'package:tokenapp/ui/container/contact_us/ContactUsController.dart';
-import 'package:tokenapp/utils/constants.dart';
-import 'package:tokenapp/utils/dimens.dart';
-import 'package:tokenapp/utils/reges_format.dart';
-import 'package:tokenapp/utils/spacers.dart';
+
 import 'package:tokenapp/widgets/widget_button.dart';
 import 'package:tokenapp/widgets/widget_textfrom_field.dart';
 import 'package:tokenapp/widgets/widget_textstyle.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 
 class RegistrationPage extends StatefulWidget {
   const RegistrationPage({Key? key}) : super(key: key);
@@ -39,7 +26,6 @@ class _LoginPageViewState extends State<RegistrationPage> {
   late TextEditingController nameController;
 
 
-  ContactUsController controller=new ContactUsController();
 
   @override
   void initState() {

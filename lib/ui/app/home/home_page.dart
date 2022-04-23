@@ -1,20 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:get/get.dart';
-import 'package:tokenapp/app_style.dart';
-import 'package:tokenapp/base/widget/custom_filled_button.dart';
-import 'package:tokenapp/base/widget/custom_text_form_field.dart';
-import 'package:tokenapp/constants.dart';
-import 'package:tokenapp/data/models/MessageResponse.dart';
-import 'package:tokenapp/data/models/container/contactus/ContactUsModel.dart';
-import 'package:tokenapp/data/models/container/contactus/ContactUsResponse.dart';
-import 'package:tokenapp/ui/app/auth/registration/registration_page.dart';
-import 'package:tokenapp/ui/common_widgets/positive_button.dart';
-import 'package:tokenapp/ui/container/UIConstants/Colors.dart';
-import 'package:tokenapp/ui/container/UIConstants/GSWidgetStyles.dart';
-import 'package:tokenapp/ui/container/UIConstants/Strings.dart';
-import 'package:tokenapp/ui/container/contact_us/ContactUsController.dart';
 import 'package:tokenapp/utils/constants.dart';
 import 'package:tokenapp/utils/dimens.dart';
 import 'package:tokenapp/utils/reges_format.dart';
@@ -38,9 +23,6 @@ class HomePage extends StatefulWidget {
 class _LoginPageViewState extends State<HomePage> {
   late TextEditingController emailController;
   late TextEditingController passwordController;
-
-  ContactUsController controller=new ContactUsController();
-
 
 
 
@@ -66,11 +48,10 @@ class _LoginPageViewState extends State<HomePage> {
       ),
       child: Scaffold(
         resizeToAvoidBottomInset: true,
-        bottomNavigationBar: WidgetNavigation(),
-        body: SafeArea(
-          child: SingleChildScrollView(
+        bottomNavigationBar: WidgetNavigation("home",0),
+        body:SingleChildScrollView(
             child: Container(
-              padding: EdgeInsets.all(10.0),
+              padding: EdgeInsets.all(15.0),
               decoration: BoxDecoration(
                   image: DecorationImage(
                     fit: BoxFit.cover,
@@ -81,6 +62,7 @@ class _LoginPageViewState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
+                  SizedBox(height: 40,),
                   WidgetTopBar(
                       count: "1.5K",
                       leftIcon:Container(),
@@ -88,41 +70,134 @@ class _LoginPageViewState extends State<HomePage> {
                       rightSection:Row()
                   ),
                   SizedBox(height: 23,),
-                  WidgetDynamicSlideBar(),
+                  WidgetDynamicSlideBar(128.0),
                   _scratchCouponCount()
                 ],
               ),
             ),
           ),
-        ),
       ),
     );
   }
 
   Widget _scratchCouponCount() {
     return Container(
-      width: MediaQuery.of(context).size.width,
-
-      color: Colors.grey,
-
-      padding: EdgeInsets.symmetric(vertical: 20.0),
-      child: GridView.builder(
-          primary: false,
-          padding: const EdgeInsets.all(0),
-          physics: const NeverScrollableScrollPhysics(),
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, crossAxisSpacing: 30, mainAxisSpacing: 30),
-          shrinkWrap: true,
-          itemCount: 4,
-          itemBuilder: (context, index) {
-            return WidgetScratchCuponItem(
+        child: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              WidgetScratchCuponItem(
+                bgImage: "",
+                title: "",
+                couponPercentise: "",
+                heaserImage:"",
+                buttonText: '',
+              ),
+              WidgetScratchCuponItem(
+                bgImage: "",
+                title: "",
+                couponPercentise: "",
+                heaserImage:"",
+                buttonText: '',
+              )
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+             WidgetScratchCuponItem(
               bgImage: "",
               title: "",
               couponPercentise: "",
               heaserImage:"",
               buttonText: '',
-            );
-          }
-      ),
+             ),
+             WidgetScratchCuponItem(
+            bgImage: "",
+            title: "",
+            couponPercentise: "",
+            heaserImage:"",
+            buttonText: '',
+          )
+            ],
+          ),
+          SizedBox(height: 15,),
+          Container(
+            width: MediaQuery.of(context).size.width,
+            height: 60,
+            decoration: BoxDecoration(
+
+                borderRadius: BorderRadius.circular(10.0),
+
+                image:DecorationImage(
+                    fit: BoxFit.cover,
+                    alignment: Alignment.topCenter,
+                    image: AssetImage("images/free_shipping_banner.png")
+                )
+            ),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              WidgetScratchCuponItem(
+                bgImage: "",
+                title: "",
+                couponPercentise: "",
+                heaserImage:"",
+                buttonText: '',
+              ),
+              WidgetScratchCuponItem(
+                bgImage: "",
+                title: "",
+                couponPercentise: "",
+                heaserImage:"",
+                buttonText: '',
+              )
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              WidgetScratchCuponItem(
+                bgImage: "",
+                title: "",
+                couponPercentise: "",
+                heaserImage:"",
+                buttonText: '',
+              ),
+              WidgetScratchCuponItem(
+                bgImage: "",
+                title: "",
+                couponPercentise: "",
+                heaserImage:"",
+                buttonText: '',
+              )
+            ],
+          ),
+          SizedBox(height: 15,),
+          WidgetDynamicSlideBar(150.0),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              WidgetScratchCuponItem(
+                bgImage: "",
+                title: "",
+                couponPercentise: "",
+                heaserImage:"",
+                buttonText: '',
+              ),
+              WidgetScratchCuponItem(
+                bgImage: "",
+                title: "",
+                couponPercentise: "",
+                heaserImage:"",
+                buttonText: '',
+              )
+            ],
+          ),
+        ],
+      )
     );
   }
 }

@@ -67,7 +67,7 @@ abstract class GSStrings {
   static const contact_us_email_address = "Email Address";
   static const contact_us_address = "Address";
   static const contact_us_website_url = "Website URL";
-  static const contact_us_your_feedback = "Send us your feedback";
+  static const contact_us_your_feedback = "Send us your comment";
   static const lost_and_found_title = "Lost & Found";
   static const lost_and_found_subtitle =
       "More than 10 years of \ntransporting experience at your \nservice.";

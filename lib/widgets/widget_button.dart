@@ -8,7 +8,7 @@ class WidgetButton extends StatefulWidget {
  EdgeInsets margin;
 
 
-  WidgetButton({required this.title, required this.onTap,required this.margin});
+  WidgetButton({required this.title, required this.onTap,required this.margin,});
 
   @override
   _WidgetButtonState createState() => _WidgetButtonState();

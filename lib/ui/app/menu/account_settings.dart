@@ -6,23 +6,14 @@ import 'package:tokenapp/data/localdata.dart';
 import 'package:tokenapp/data/models/container/FaqModel.dart';
 import 'package:tokenapp/data/models/container/contactus/ContactUsModel.dart';
 import 'package:tokenapp/data/models/contuctus/model_contuct_us.dart';
-import 'package:tokenapp/ui/container/UIConstants/Colors.dart';
-import 'package:tokenapp/ui/container/UIConstants/GSWidgetStyles.dart';
-import 'package:tokenapp/ui/container/UIConstants/Strings.dart';
-import 'package:tokenapp/ui/container/book_a_bus/book_a_bus.dart';
-import 'package:tokenapp/ui/container/faq/FaqController.dart';
-import 'package:tokenapp/ui/container/lost_and_found/lost_and_found.dart';
-import 'package:tokenapp/ui/container/our_service/our_service.dart';
-import 'package:tokenapp/ui/container/privacy_and_concern/privacy_and_concern.dart';
-import 'package:tokenapp/ui/container/terms_and_conditions/terms_and_conditions.dart';
+import 'package:tokenapp/ui/app/menu/update_address.dart';
+import 'package:tokenapp/ui/app/menu/update_information.dart';
+import 'package:tokenapp/ui/app/menu/update_new_password.dart';
+
 import 'package:tokenapp/utils/constants.dart';
 import 'package:tokenapp/widgets/widget_button.dart';
 import 'package:tokenapp/widgets/widget_menu_listtile.dart';
-import 'package:tokenapp/widgets/widget_navigation_container.dart';
-import 'package:tokenapp/widgets/widget_textfrom_field.dart';
-import 'package:screenshot/screenshot.dart';
 
-import '../../../constants.dart';
 
 class AccountSettingsSettingsPage extends StatefulWidget {
   const AccountSettingsSettingsPage({Key? key}) : super(key: key);
@@ -33,7 +24,7 @@ class AccountSettingsSettingsPage extends StatefulWidget {
 
 class _FaqViewState extends State<AccountSettingsSettingsPage> {
   late TextEditingController emailController;
-  FaqController controller=new FaqController();
+
 
   @override
   void initState() {
@@ -77,6 +68,14 @@ class _FaqViewState extends State<AccountSettingsSettingsPage> {
                       children: [
                         SizedBox(height: 24,),
                         WidgetMenuListTile(
+                            onTap:(){
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => (UpdateInformationPage()),
+                                ),
+                              );
+                            },
                             title:"Information",
                             subtitle: "News & Lates Update",
                             icon: SvgPicture.asset(AssetConstants.information,height: 40,width: 40,),
@@ -86,6 +85,14 @@ class _FaqViewState extends State<AccountSettingsSettingsPage> {
                         ),
                         SizedBox(height: 12,),
                         WidgetMenuListTile(
+                            onTap:(){
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => (UpdatePasswordPage()),
+                                ),
+                              );
+                            },
                             title:"Change Password",
                             subtitle: "News & Lates Update",
                             icon: SvgPicture.asset(AssetConstants.changepass,height: 40,width: 40,),
@@ -95,6 +102,14 @@ class _FaqViewState extends State<AccountSettingsSettingsPage> {
                         ),
                         SizedBox(height: 12,),
                         WidgetMenuListTile(
+                            onTap:(){
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => (UpdateAddressPage()),
+                                ),
+                              );
+                            },
                             title:"Address",
                             subtitle: "News & Lates Update",
                             icon: SvgPicture.asset(AssetConstants.address,height: 40,width: 40,),
@@ -113,13 +128,7 @@ class _FaqViewState extends State<AccountSettingsSettingsPage> {
       ),
     );
   }
-  Future<FaqModel> getFaqData() async{
 
-    var response = await controller.FaqServiceProvider();
-    print("response${response.data}");
-    return response;
-
-  }
 }
 
 class TitleWidget extends StatelessWidget {

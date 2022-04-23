@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tokenapp/base/widget/custom_filled_button.dart';
-import 'package:tokenapp/ui/book_a_bus/info_screen.dart';
 import 'package:tokenapp/ui/container/UIConstants/Colors.dart';
 import 'package:tokenapp/ui/container/UIConstants/Fonts.dart';
 import 'package:tokenapp/ui/container/UIConstants/GSWidgetStyles.dart';
@@ -119,9 +118,6 @@ class CustomBusTimeWidget extends StatelessWidget {
                         textColor: GSColors.green_normal,
                         title: GSStrings.book_now,
                         onTap: () {
-                          Get.to(
-                            InfoScreen(),
-                          );
                         },
                       ),
                     ],

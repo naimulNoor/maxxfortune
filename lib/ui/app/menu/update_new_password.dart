@@ -10,12 +10,6 @@ import 'package:tokenapp/ui/app/auth/forgetpassword/forgetpass_page.dart';
 import 'package:tokenapp/ui/container/UIConstants/Colors.dart';
 import 'package:tokenapp/ui/container/UIConstants/GSWidgetStyles.dart';
 import 'package:tokenapp/ui/container/UIConstants/Strings.dart';
-import 'package:tokenapp/ui/container/book_a_bus/book_a_bus.dart';
-import 'package:tokenapp/ui/container/faq/FaqController.dart';
-import 'package:tokenapp/ui/container/lost_and_found/lost_and_found.dart';
-import 'package:tokenapp/ui/container/our_service/our_service.dart';
-import 'package:tokenapp/ui/container/privacy_and_concern/privacy_and_concern.dart';
-import 'package:tokenapp/ui/container/terms_and_conditions/terms_and_conditions.dart';
 import 'package:tokenapp/utils/constants.dart';
 import 'package:tokenapp/widgets/widget_button.dart';
 import 'package:tokenapp/widgets/widget_menu_listtile.dart';
@@ -26,18 +20,17 @@ import 'package:tokenapp/widgets/widget_upload_multiphoto.dart';
 
 import '../../../constants.dart';
 
-class UpdateInformationPage extends StatefulWidget {
+class UpdatePasswordPage extends StatefulWidget {
 
-  const UpdateInformationPage({Key? key}) : super(key: key);
+  const UpdatePasswordPage({Key? key}) : super(key: key);
 
 
   @override
   _FaqViewState createState() => _FaqViewState();
 }
 
-class _FaqViewState extends State<UpdateInformationPage> {
+class _FaqViewState extends State<UpdatePasswordPage> {
   late TextEditingController emailController;
-  FaqController controller=new FaqController();
   late TextEditingController passwordController;
   late TextEditingController confirmPasswordController;
   late TextEditingController phonController;
@@ -92,24 +85,23 @@ class _FaqViewState extends State<UpdateInformationPage> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      WidgetUploadMultiPhotos(),
                       WidgetTextFormField(
                         formController: passwordController,
-                        hintText: "Name",
-                        margin:EdgeInsets.fromLTRB(30, 27, 30, 16),
-                        inputType: TextInputType.text,
-                        hint: GSStrings.contact_us_full_name,
-                      ),
-                      WidgetTextFormField(
-                        formController: passwordController,
-                        hintText: "Email",
+                        hintText: "CURRENT PASSWORD",
                         margin:EdgeInsets.fromLTRB(30, 0, 30, 16),
                         inputType: TextInputType.text,
                         hint: GSStrings.contact_us_full_name,
                       ),
                       WidgetTextFormField(
                         formController: passwordController,
-                        hintText: "Phone",
+                        hintText: "NEW PASSWORD",
+                        margin:EdgeInsets.fromLTRB(30, 0, 30, 16),
+                        inputType: TextInputType.text,
+                        hint: GSStrings.contact_us_full_name,
+                      ),
+                      WidgetTextFormField(
+                        formController: passwordController,
+                        hintText: "CONFIRM NEW PASSWORD",
                         margin:EdgeInsets.fromLTRB(30, 0, 30, 16),
                         inputType: TextInputType.text,
                         hint: GSStrings.contact_us_full_name,
@@ -117,7 +109,7 @@ class _FaqViewState extends State<UpdateInformationPage> {
 
 
                       WidgetButton(
-                        title:"Update Information",
+                        title:"Update New Password",
                         margin:EdgeInsets.symmetric(horizontal: 30.0,vertical: 10.0),
                         onTap: () {
                           Navigator.push(
@@ -137,13 +129,6 @@ class _FaqViewState extends State<UpdateInformationPage> {
         ),
       ),
     );
-  }
-  Future<FaqModel> getFaqData() async{
-
-    var response = await controller.FaqServiceProvider();
-    print("response${response.data}");
-    return response;
-
   }
 }
 
@@ -189,7 +174,7 @@ class TitleWidget extends StatelessWidget {
                           Container(
                             width:300,
                             child: Text(
-                              "Information",
+                              "Change Password",
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                   color: Colors.black,

@@ -6,23 +6,16 @@ import 'package:tokenapp/data/localdata.dart';
 import 'package:tokenapp/data/models/container/FaqModel.dart';
 import 'package:tokenapp/data/models/container/contactus/ContactUsModel.dart';
 import 'package:tokenapp/data/models/contuctus/model_contuct_us.dart';
-import 'package:tokenapp/ui/container/UIConstants/Colors.dart';
-import 'package:tokenapp/ui/container/UIConstants/GSWidgetStyles.dart';
-import 'package:tokenapp/ui/container/UIConstants/Strings.dart';
-import 'package:tokenapp/ui/container/book_a_bus/book_a_bus.dart';
-import 'package:tokenapp/ui/container/faq/FaqController.dart';
-import 'package:tokenapp/ui/container/lost_and_found/lost_and_found.dart';
-import 'package:tokenapp/ui/container/our_service/our_service.dart';
-import 'package:tokenapp/ui/container/privacy_and_concern/privacy_and_concern.dart';
-import 'package:tokenapp/ui/container/terms_and_conditions/terms_and_conditions.dart';
+import 'package:tokenapp/ui/app/info/profile.dart';
+import 'package:tokenapp/ui/app/news/news_list.dart';
+
 import 'package:tokenapp/utils/constants.dart';
 import 'package:tokenapp/widgets/widget_button.dart';
 import 'package:tokenapp/widgets/widget_menu_listtile.dart';
 import 'package:tokenapp/widgets/widget_navigation_container.dart';
-import 'package:tokenapp/widgets/widget_textfrom_field.dart';
-import 'package:screenshot/screenshot.dart';
 
 import '../../../constants.dart';
+import 'account_settings.dart';
 
 class WidgetMenu extends StatefulWidget {
   const WidgetMenu({Key? key}) : super(key: key);
@@ -33,7 +26,7 @@ class WidgetMenu extends StatefulWidget {
 
 class _FaqViewState extends State<WidgetMenu> {
   late TextEditingController emailController;
-  FaqController controller=new FaqController();
+
 
   @override
   void initState() {
@@ -57,7 +50,7 @@ class _FaqViewState extends State<WidgetMenu> {
       child: Scaffold(
         backgroundColor: Colors.white,
         resizeToAvoidBottomInset: true,
-        bottomNavigationBar: WidgetNavigation(),
+        bottomNavigationBar: WidgetNavigation("menu",3),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -83,7 +76,15 @@ class _FaqViewState extends State<WidgetMenu> {
                          ),),
                          SizedBox(height: 12,),
                          WidgetMenuListTile(
-                           title:"News & Blog",
+                           onTap:(){
+                             Navigator.push(
+                               context,
+                               MaterialPageRoute(
+                                 builder: (context) => (NewsListPage()),
+                               ),
+                             );
+                           },
+                           title:"Refer and Earn",
                            subtitle: "News & Lates Update",
                            icon: SvgPicture.asset(AssetConstants.news,height: 40,width: 40,),
                            iconColor: Color(0xff2E7BE4),
@@ -91,6 +92,7 @@ class _FaqViewState extends State<WidgetMenu> {
                            titleColor: Color(0xff000000)
                          ),
                          WidgetMenuListTile(
+                             onTap: (){},
                             title:"News & Blog",
                             subtitle: "News & Lates Update",
                             icon: SvgPicture.asset(AssetConstants.refer,height: 40,width: 40,),
@@ -106,6 +108,7 @@ class _FaqViewState extends State<WidgetMenu> {
                         ),),
                         SizedBox(height: 12,),
                         WidgetMenuListTile(
+                            onTap: (){},
                             title:"FAQs",
                             subtitle: "News & Lates Update",
                             icon: SvgPicture.asset(AssetConstants.faq,height: 40,width: 40,),
@@ -114,6 +117,7 @@ class _FaqViewState extends State<WidgetMenu> {
                             titleColor: Color(0xff000000)
                         ),
                         WidgetMenuListTile(
+                            onTap: (){},
                             title:"Contact with US",
                             subtitle: "News & Lates Update",
                             icon: SvgPicture.asset(AssetConstants.contact,height: 40,width: 40,),
@@ -122,6 +126,7 @@ class _FaqViewState extends State<WidgetMenu> {
                             titleColor: Color(0xff000000)
                         ),
                         WidgetMenuListTile(
+                            onTap: (){},
                             title:"Privacy Policy",
                             subtitle: "News & Lates Update",
                             icon: SvgPicture.asset(AssetConstants.privacyIcon,height: 40,width: 40,),
@@ -137,6 +142,14 @@ class _FaqViewState extends State<WidgetMenu> {
                         ),),
                         SizedBox(height: 12,),
                         WidgetMenuListTile(
+                            onTap:(){
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => (AccountSettingsSettingsPage()),
+                                ),
+                              );
+                            },
                             title:"Account Settings",
                             subtitle: "Generate Lorem Ipsum place.",
                             icon: SvgPicture.asset(AssetConstants.privacyIcon,height: 40,width: 40,),
@@ -145,6 +158,7 @@ class _FaqViewState extends State<WidgetMenu> {
                             titleColor: Color(0xff000000)
                         ),
                         WidgetMenuListTile(
+                            onTap: (){},
                             title:"Logout",
                             subtitle: "Generate Lorem Ipsum place.",
                             icon: SvgPicture.asset(AssetConstants.lock,height: 40,width: 40,),
@@ -162,13 +176,7 @@ class _FaqViewState extends State<WidgetMenu> {
       ),
     );
   }
-  Future<FaqModel> getFaqData() async{
 
-    var response = await controller.FaqServiceProvider();
-    print("response${response.data}");
-    return response;
-
-  }
 }
 
 class TitleWidget extends StatelessWidget {
@@ -213,7 +221,14 @@ class TitleWidget extends StatelessWidget {
                                 Container(
                                   width: 109,
                                   child: InkWell(
-                                    onTap:(){},
+                                    onTap:(){
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => (ProfilePage ()),
+                                        ),
+                                      );
+                                    },
                                     child: Container(
                                       height: 23,
                                       decoration: BoxDecoration(

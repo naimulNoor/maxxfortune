@@ -7,37 +7,25 @@ import 'package:tokenapp/data/models/container/FaqModel.dart';
 import 'package:tokenapp/data/models/container/contactus/ContactUsModel.dart';
 import 'package:tokenapp/data/models/contuctus/model_contuct_us.dart';
 import 'package:tokenapp/ui/app/auth/forgetpassword/forgetpass_page.dart';
-import 'package:tokenapp/ui/container/UIConstants/Colors.dart';
-import 'package:tokenapp/ui/container/UIConstants/GSWidgetStyles.dart';
-import 'package:tokenapp/ui/container/UIConstants/Strings.dart';
-import 'package:tokenapp/ui/container/book_a_bus/book_a_bus.dart';
-import 'package:tokenapp/ui/container/faq/FaqController.dart';
-import 'package:tokenapp/ui/container/lost_and_found/lost_and_found.dart';
-import 'package:tokenapp/ui/container/our_service/our_service.dart';
-import 'package:tokenapp/ui/container/privacy_and_concern/privacy_and_concern.dart';
-import 'package:tokenapp/ui/container/terms_and_conditions/terms_and_conditions.dart';
 import 'package:tokenapp/utils/constants.dart';
 import 'package:tokenapp/widgets/widget_button.dart';
-import 'package:tokenapp/widgets/widget_menu_listtile.dart';
-import 'package:tokenapp/widgets/widget_navigation_container.dart';
-import 'package:tokenapp/widgets/widget_textfrom_field.dart';
-import 'package:screenshot/screenshot.dart';
-import 'package:tokenapp/widgets/widget_upload_multiphoto.dart';
+
+import 'package:tokenapp/widgets/widget_textfrom_field_two.dart';
+
 
 import '../../../constants.dart';
 
-class UpdatePasswordPage extends StatefulWidget {
+class UpdateAddressPage extends StatefulWidget {
 
-  const UpdatePasswordPage({Key? key}) : super(key: key);
+  const UpdateAddressPage({Key? key}) : super(key: key);
 
 
   @override
   _FaqViewState createState() => _FaqViewState();
 }
 
-class _FaqViewState extends State<UpdatePasswordPage> {
+class _FaqViewState extends State<UpdateAddressPage> {
   late TextEditingController emailController;
-  FaqController controller=new FaqController();
   late TextEditingController passwordController;
   late TextEditingController confirmPasswordController;
   late TextEditingController phonController;
@@ -92,27 +80,33 @@ class _FaqViewState extends State<UpdatePasswordPage> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      WidgetTextFormField(
-                        formController: passwordController,
-                        hintText: "CURRENT PASSWORD",
-                        margin:EdgeInsets.fromLTRB(30, 0, 30, 16),
-                        inputType: TextInputType.text,
-                        hint: GSStrings.contact_us_full_name,
+                      WidgetTextFormFieldTwo(formController: emailController, inputType: TextInputType.streetAddress, hintText: "STREET ADDRESS",hintColor: Colors.black, margin:EdgeInsets.symmetric(horizontal: 30.0,vertical: 10.0),),
+                      WidgetTextFormFieldTwo(formController: emailController, inputType: TextInputType.text, hintText: "APT/ SUITE (OPTIONAL)",hintColor: Colors.black, margin:EdgeInsets.symmetric(horizontal: 30.0,vertical: 10.0),),
+                      Container(
+                        child: Row(
+                          children: [
+                            Expanded(
+                                flex:2,
+                                child: WidgetTextFormFieldTwo(
+                                    formController: emailController,
+                                    inputType: TextInputType.streetAddress,
+                                    hintText: "CURRENT CITY",
+                                    hintColor: Colors.black,
+                                    margin:EdgeInsets.fromLTRB(30, 10, 5, 0)
+                                )),
+                            Expanded(
+                                flex:2,
+                                child: WidgetTextFormFieldTwo(
+                                    formController: emailController,
+                                    inputType: TextInputType.streetAddress,
+                                    hintText: "ZIP CODE",
+                                    hintColor: Colors.black,
+                                    margin:EdgeInsets.fromLTRB(5, 10, 30, 0)
+                                )),
+                          ],
+                        ),
                       ),
-                      WidgetTextFormField(
-                        formController: passwordController,
-                        hintText: "NEW PASSWORD",
-                        margin:EdgeInsets.fromLTRB(30, 0, 30, 16),
-                        inputType: TextInputType.text,
-                        hint: GSStrings.contact_us_full_name,
-                      ),
-                      WidgetTextFormField(
-                        formController: passwordController,
-                        hintText: "CONFIRM NEW PASSWORD",
-                        margin:EdgeInsets.fromLTRB(30, 0, 30, 16),
-                        inputType: TextInputType.text,
-                        hint: GSStrings.contact_us_full_name,
-                      ),
+                      SizedBox(height: 10,),
 
 
                       WidgetButton(
@@ -137,13 +131,7 @@ class _FaqViewState extends State<UpdatePasswordPage> {
       ),
     );
   }
-  Future<FaqModel> getFaqData() async{
 
-    var response = await controller.FaqServiceProvider();
-    print("response${response.data}");
-    return response;
-
-  }
 }
 
 class TitleWidget extends StatelessWidget {
@@ -188,7 +176,7 @@ class TitleWidget extends StatelessWidget {
                           Container(
                             width:300,
                             child: Text(
-                              "Change Password",
+                              "Address",
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                   color: Colors.black,

@@ -21,20 +21,19 @@ class WidgetScratchCuponItem extends StatefulWidget {
 class _WidgetButtonState extends State<WidgetScratchCuponItem> {
   @override
   Widget build(BuildContext context) {
-    return Container(
 
-        margin: EdgeInsets.all(10.0),
+    return Container(
+        width: 180,
+        height: 180,
+        margin: EdgeInsets.only(top: 40.0),
         decoration: BoxDecoration(
-            gradient: LinearGradient(
-                colors: [color_lightorange,color_red],
-                begin: const FractionalOffset(0.0, 0.0),
-                end: const FractionalOffset(0.8, 0.0),
-                stops: [0.0, 5.0],
-                tileMode: TileMode.clamp
-            ),
+            color: Colors.white,
             borderRadius: BorderRadius.circular(20.0),
+
             image:DecorationImage(
-                image: AssetImage(AssetConstants.signup_bg_image)
+                opacity: 0.3,
+                alignment: Alignment.topCenter,
+                image: AssetImage("images/coupon.png")
             )
         ),
         child: Stack(
@@ -47,19 +46,41 @@ class _WidgetButtonState extends State<WidgetScratchCuponItem> {
               height: 165,
               margin: EdgeInsets.fromLTRB(0, 40, 0, 0),
               child:Container(
+
                  child: Stack(
                    children:[
-
-                   Container(
+                     Container(
                      child: Column(
+                       crossAxisAlignment: CrossAxisAlignment.center,
+                       mainAxisSize: MainAxisSize.max,
+                       mainAxisAlignment: MainAxisAlignment.end,
                        children: [
-                         Text("KFC"),
-                         Text("25 % OFF"),
-                         WidgetButton(
-                           title:"Scratch",
-                           onTap: (){},
-                           margin: EdgeInsets.all(10.0),
-                         )
+                         Text("KFC",style: TextStyle(color: Color(0xff787B8C),fontWeight:FontWeight.w500,fontSize: 15),),
+                         SizedBox(height: 5,),
+                         Text("25 % OFF",style: TextStyle(color: Color(0xff11243D),fontWeight:FontWeight.w700,fontSize: 18),),
+                         Container(
+                  child: InkWell(
+                    onTap: (){},
+                    child: Container(
+                      margin: EdgeInsets.all(10.0),
+                      height: 48,
+                      width: MediaQuery.of(context).size.width,
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                            colors: [color_lightorange,color_red],
+                            begin: const FractionalOffset(0.0, 0.0),
+                            end: const FractionalOffset(0.8, 0.0),
+                            stops: [0.0, 5.0],
+                            tileMode: TileMode.clamp
+                        ),
+                        borderRadius: BorderRadius.circular(50.0),
+
+                      ),
+                      child: Center(
+                          child: Text("Scratch",style: TextStyle(color: Colors.white),)),
+                    ),
+                  ),
+                )
                        ],
                      ),
                    )
@@ -67,16 +88,16 @@ class _WidgetButtonState extends State<WidgetScratchCuponItem> {
               ),
             ),
             Positioned(
-              top: -20,
+              top: -30,
               child: Container(
-                height: 56,
-                width: 56,
+                height: 70,
+                width: 70,
                 decoration: BoxDecoration(
-                    color: Colors.green,
+                    color: Colors.white,
                     borderRadius: BorderRadius.circular(15.0)
                 ),
                 child: Center(
-                  child: CircleAvatar(),
+                  child: CircleAvatar(backgroundImage: AssetImage("images/company.png"),radius: 25.0,),
                 ),
               ),
             ),

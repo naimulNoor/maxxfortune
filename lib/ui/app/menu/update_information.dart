@@ -10,12 +10,6 @@ import 'package:tokenapp/ui/app/auth/forgetpassword/forgetpass_page.dart';
 import 'package:tokenapp/ui/container/UIConstants/Colors.dart';
 import 'package:tokenapp/ui/container/UIConstants/GSWidgetStyles.dart';
 import 'package:tokenapp/ui/container/UIConstants/Strings.dart';
-import 'package:tokenapp/ui/container/book_a_bus/book_a_bus.dart';
-import 'package:tokenapp/ui/container/faq/FaqController.dart';
-import 'package:tokenapp/ui/container/lost_and_found/lost_and_found.dart';
-import 'package:tokenapp/ui/container/our_service/our_service.dart';
-import 'package:tokenapp/ui/container/privacy_and_concern/privacy_and_concern.dart';
-import 'package:tokenapp/ui/container/terms_and_conditions/terms_and_conditions.dart';
 import 'package:tokenapp/utils/constants.dart';
 import 'package:tokenapp/widgets/widget_button.dart';
 import 'package:tokenapp/widgets/widget_menu_listtile.dart';
@@ -37,7 +31,7 @@ class UpdateInformationPage extends StatefulWidget {
 
 class _FaqViewState extends State<UpdateInformationPage> {
   late TextEditingController emailController;
-  FaqController controller=new FaqController();
+
   late TextEditingController passwordController;
   late TextEditingController confirmPasswordController;
   late TextEditingController phonController;
@@ -95,21 +89,21 @@ class _FaqViewState extends State<UpdateInformationPage> {
                       WidgetUploadMultiPhotos(),
                       WidgetTextFormField(
                         formController: passwordController,
-                        hintText: "PASSWORD",
+                        hintText: "Name",
                         margin:EdgeInsets.fromLTRB(30, 27, 30, 16),
                         inputType: TextInputType.text,
                         hint: GSStrings.contact_us_full_name,
                       ),
                       WidgetTextFormField(
                         formController: passwordController,
-                        hintText: "PASSWORD",
+                        hintText: "Email",
                         margin:EdgeInsets.fromLTRB(30, 0, 30, 16),
                         inputType: TextInputType.text,
                         hint: GSStrings.contact_us_full_name,
                       ),
                       WidgetTextFormField(
                         formController: passwordController,
-                        hintText: "PASSWORD",
+                        hintText: "Phone",
                         margin:EdgeInsets.fromLTRB(30, 0, 30, 16),
                         inputType: TextInputType.text,
                         hint: GSStrings.contact_us_full_name,
@@ -138,13 +132,7 @@ class _FaqViewState extends State<UpdateInformationPage> {
       ),
     );
   }
-  Future<FaqModel> getFaqData() async{
 
-    var response = await controller.FaqServiceProvider();
-    print("response${response.data}");
-    return response;
-
-  }
 }
 
 class TitleWidget extends StatelessWidget {

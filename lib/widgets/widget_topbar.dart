@@ -71,7 +71,8 @@ class _WidgetTopBarState extends State<WidgetTopBar> {
                   children: [
                     Row(
                       children: [
-                        SvgPicture.asset(AssetConstants.lion,height: 40,width: 40,),
+                        Image.asset("images/icons/lion.png",height: 40,width: 40,),
+                        SizedBox(width: 5,),
                         Text(widget.count,style: TextStyle(color: colortitle,fontWeight: FontWeight.bold),)
                       ],
                     ),

@@ -3,15 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:tokenapp/app_style.dart';
 import 'package:tokenapp/data/models/container/FaqModel.dart';
 import 'package:tokenapp/ui/app/info/contact/contact_page.dart';
-import 'package:tokenapp/ui/container/UIConstants/Colors.dart';
-import 'package:tokenapp/ui/container/UIConstants/GSWidgetStyles.dart';
-import 'package:tokenapp/ui/container/UIConstants/Strings.dart';
-import 'package:tokenapp/ui/container/book_a_bus/book_a_bus.dart';
-import 'package:tokenapp/ui/container/faq/FaqController.dart';
-import 'package:tokenapp/ui/container/lost_and_found/lost_and_found.dart';
-import 'package:tokenapp/ui/container/our_service/our_service.dart';
-import 'package:tokenapp/ui/container/privacy_and_concern/privacy_and_concern.dart';
-import 'package:tokenapp/ui/container/terms_and_conditions/terms_and_conditions.dart';
+
 
 class FaqPage extends StatefulWidget {
   const FaqPage({Key? key}) : super(key: key);
@@ -22,7 +14,7 @@ class FaqPage extends StatefulWidget {
 
 class _FaqViewState extends State<FaqPage> {
 
-  FaqController controller=new FaqController();
+
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +39,6 @@ class _FaqViewState extends State<FaqPage> {
             Expanded(
               flex: 1,
               child: FutureBuilder<FaqModel>(
-                future: getFaqData(),
                 builder: (context, snapshot){
                   if(snapshot.hasData){
                     return FaqListWidget(data:snapshot.data);
@@ -65,13 +56,6 @@ class _FaqViewState extends State<FaqPage> {
         ),
       ),
     );
-  }
-  Future<FaqModel> getFaqData() async{
-
-    var response = await controller.FaqServiceProvider();
-    print("response${response.data}");
-    return response;
-
   }
 }
 

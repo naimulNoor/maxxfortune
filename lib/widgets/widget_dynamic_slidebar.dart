@@ -6,8 +6,8 @@ import '../constants.dart';
 
 class WidgetDynamicSlideBar extends StatefulWidget {
 
-
- WidgetDynamicSlideBar();
+ double height;
+ WidgetDynamicSlideBar(this.height);
 
   @override
   _WidgetButtonState createState() => _WidgetButtonState();
@@ -19,7 +19,7 @@ class _WidgetButtonState extends State<WidgetDynamicSlideBar> {
     return Container(
       child: CarouselSlider(
         options: CarouselOptions(
-          height: 128.0,
+          height: widget.height,
           viewportFraction: 1.0,
           enlargeCenterPage: false,
           autoPlayInterval: Duration(seconds: 3),
