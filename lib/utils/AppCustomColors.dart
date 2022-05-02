@@ -13,4 +13,5 @@ class AppCustomColors{
   static const dividerColor = Color(0xFFE7E7E7);
   static const backgroundColor = Color(0xFFF5F5F5);
   static const cardPinkColor = Color(0xFFE3005F);
+  static const dialogBorderColor = Color(0xFFFF3E75);
 }

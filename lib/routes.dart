@@ -1,8 +1,14 @@
 
 import 'package:flutter/material.dart';
+import 'package:tokenapp/ui/ninja/AddCardScreen.dart';
+import 'package:tokenapp/ui/ninja/ClaimScreenOne.dart';
+import 'package:tokenapp/ui/ninja/ClaimScreenTwo.dart';
 
 import 'package:tokenapp/ui/ninja/DailyRewardScreen.dart';
 import 'package:tokenapp/ui/ninja/DiscountScreen.dart';
+import 'package:tokenapp/ui/ninja/EarnCreditScreen.dart';
+import 'package:tokenapp/ui/ninja/MembershipScreen.dart';
+import 'package:tokenapp/ui/ninja/ScanScreen.dart';
 import 'package:tokenapp/ui/ninja/dialog_scratch.dart';
 import 'package:tokenapp/ui/ninja/RedeemCoinScreen.dart';
 import 'package:tokenapp/ui/ninja/SpecialCampaignScreen.dart';
@@ -23,6 +29,13 @@ class Routes {
   static const String vip = '/vip';
   static const String wallet = '/wallet';
 
+  static const String addCard = '/addCard';
+  static const String claimOne = '/claimOne';
+  static const String claimTwo = '/claimTwo';
+  static const String earnCredit = '/earnCredit';
+  static const String membership = '/membership';
+  static const String scanScreen = '/scanScreen';
+
   static final routes = <String, WidgetBuilder>{
     dialog_scratch: (BuildContext context) => const DialogScratchPage(),
     discount: (BuildContext context) =>const DiscountPage(),
@@ -32,6 +45,13 @@ class Routes {
     token: (BuildContext context) => const TokenPage(),
     vip: (BuildContext context) => const VipPage(),
     wallet: (BuildContext context) => const WalletTabPage(),
+
+    addCard: (BuildContext context) => const AddCardPage(),
+    claimOne: (BuildContext context) => const ClaimPageOne(),
+    claimTwo: (BuildContext context) => const ClaimTwoPage(),
+    earnCredit: (BuildContext context) => const EarnCreditPage(),
+    membership: (BuildContext context) => const MembershipPage(),
+    scanScreen: (BuildContext context) => const ScanPage(),
   };
 }
 

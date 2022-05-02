@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:tokenapp/routes.dart';
 import 'package:tokenapp/utils/AppCustomColors.dart';
 
 
@@ -14,8 +15,7 @@ class _RedeemCoinPageState extends State<RedeemCoinPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-          child: Container(
+      body:  Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment(-1.0, -2.0),
@@ -26,21 +26,23 @@ class _RedeemCoinPageState extends State<RedeemCoinPage> {
             ],
           ),
         ),
-        child: Stack(
-          children: [
-            Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [_appBar(), _body()],
-            ),
-            Positioned(
-              child: _watchButton(),
-              bottom: 5,
-              left: 40,
-              right: 40,
-            )
-          ],
+        child: SafeArea(
+          child: Stack(
+            children: [
+              Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [_appBar(), _body()],
+              ),
+              Positioned(
+                child: _watchButton(),
+                bottom: 5,
+                left: 40,
+                right: 40,
+              )
+            ],
+          ),
         ),
-      )),
+      )
     );
   }
 
@@ -80,7 +82,7 @@ class _RedeemCoinPageState extends State<RedeemCoinPage> {
                         fontSize: 15.0,
                         color: AppCustomColors.textLightColor),
                   ),
-                  SvgPicture.asset("assets/images/ic_coin.svg"),
+                  SvgPicture.asset("images/ic_coin.svg"),
                   const SizedBox(
                     width: 5.0,
                   ),
@@ -133,7 +135,7 @@ class _RedeemCoinPageState extends State<RedeemCoinPage> {
         Container(
           decoration: const BoxDecoration(
               image: DecorationImage(
-                  image: AssetImage("assets/images/coupon_bg.png"))),
+                  image: AssetImage("images/coupon_bg.png"))),
         ),
         Positioned(
           child: Container(
@@ -192,36 +194,41 @@ class _RedeemCoinPageState extends State<RedeemCoinPage> {
   Widget _watchButton() {
     return Padding(
       padding: const EdgeInsets.only(bottom: 15.0),
-      child: Container(
-        width: MediaQuery.of(context).size.width / 1.5,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(25.0),
-          gradient: const LinearGradient(
-            begin: Alignment(-1.0, -2.0),
-            end: Alignment(1.0, 2.0),
-            colors: <Color>[
-              AppCustomColors.buttonStartColor,
-              AppCustomColors.buttonEndColor
-            ],
+      child: InkWell(
+        onTap: (){
+          Navigator.pushNamed(context, Routes.earnCredit);
+        },
+        child: Container(
+          width: MediaQuery.of(context).size.width / 1.5,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(25.0),
+            gradient: const LinearGradient(
+              begin: Alignment(-1.0, -2.0),
+              end: Alignment(1.0, 2.0),
+              colors: <Color>[
+                AppCustomColors.buttonStartColor,
+                AppCustomColors.buttonEndColor
+              ],
+            ),
           ),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              SvgPicture.asset("assets/images/ic_play.svg"),
-              const SizedBox(
-                width: 10.0,
-              ),
-              const Text(
-                "Watch & Earn Coins",
-                style: TextStyle(
-                    fontWeight: FontWeight.normal,
-                    fontSize: 18.0,
-                    color: Colors.white),
-              )
-            ],
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SvgPicture.asset("assets/images/ic_play.svg"),
+                const SizedBox(
+                  width: 10.0,
+                ),
+                const Text(
+                  "Watch & Earn Coins",
+                  style: TextStyle(
+                      fontWeight: FontWeight.normal,
+                      fontSize: 18.0,
+                      color: Colors.white),
+                )
+              ],
+            ),
           ),
         ),
       ),

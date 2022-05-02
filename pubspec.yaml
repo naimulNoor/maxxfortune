@@ -56,6 +56,8 @@ dependencies:
   launch_review: ^3.0.1
   image_gallery_saver: '^1.7.1'
   badges: ^2.0.2
+  dotted_border: ^2.0.0+2
+  confetti: ^0.6.0
 
   #Firebase
   firebase_core: ^1.10.6
