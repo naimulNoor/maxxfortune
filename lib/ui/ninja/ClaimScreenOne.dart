@@ -2,6 +2,7 @@ import 'package:confetti/confetti.dart';
 import 'package:dotted_line/dotted_line.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:tokenapp/routes.dart';
 
 import '../../Utils/AppCustomColors.dart';
 import '../../Utils/CustomClipPath.dart';
@@ -174,13 +175,18 @@ class _ClaimPageOneState extends State<ClaimPageOne> {
               const SizedBox(height: 20.0,),
               Padding(
                 padding: const EdgeInsets.only(left: 30.0, right: 30.0),
-                child: Container(
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(50.0),
-                      gradient: const LinearGradient(colors: [AppCustomColors.buttonStartColor, AppCustomColors.buttonEndColor])
+                child: InkWell(
+                  onTap: (){
+                    Navigator.pushNamed(context, Routes.claimTwo);
+                  },
+                  child: Container(
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50.0),
+                        gradient: const LinearGradient(colors: [AppCustomColors.buttonStartColor, AppCustomColors.buttonEndColor])
+                    ),
+                    child: const Padding(padding: EdgeInsets.all(15.0), child: Text("Scan to Reedem", style: TextStyle(fontWeight: FontWeight.normal, fontSize: 16.0, color: Colors.white),textAlign: TextAlign.center,),),
                   ),
-                  child: const Padding(padding: EdgeInsets.all(15.0), child: Text("Scan to Reedem", style: TextStyle(fontWeight: FontWeight.normal, fontSize: 16.0, color: Colors.white),textAlign: TextAlign.center,),),
                 ),
               ),
             ],

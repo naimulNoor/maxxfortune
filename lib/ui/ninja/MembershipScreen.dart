@@ -12,9 +12,7 @@ class MembershipPage extends StatefulWidget {
 class _MembershipPageState extends State<MembershipPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Container(
+    return  Container(
           height: 320.0,
           width: MediaQuery.of(context).size.width - 40,
           decoration: BoxDecoration(
@@ -92,12 +90,11 @@ class _MembershipPageState extends State<MembershipPage> {
                     ]),
               ),
               const SizedBox(height: 40.0,),
-              Image.asset("assets/images/barcode.png"),
+              Image.asset("images/barcode.png"),
               const SizedBox(height: 20.0,),
             ],
           ),
-        ),
-      ),
+
     );
   }
 }

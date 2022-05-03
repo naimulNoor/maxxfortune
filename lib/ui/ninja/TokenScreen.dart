@@ -96,7 +96,7 @@ class _TokenPageState extends State<TokenPage> {
             padding: const EdgeInsets.only(left: 30.0,right: 30.0),
             child: Row(
               children: [
-                SvgPicture.asset("assets/images/ic_starbucks.svg"),
+                SvgPicture.asset("images/ic_starbucks.svg"),
                 const SizedBox(width: 10.0,),
                 Expanded(
                   child: Column(
@@ -108,7 +108,7 @@ class _TokenPageState extends State<TokenPage> {
                     ],
                   ),
                 ),
-                SvgPicture.asset("assets/images/ic_procced.svg"),
+                SvgPicture.asset("images/ic_procced.svg"),
               ],
             ),
           ), top: 20, left: 0, right: 0,)

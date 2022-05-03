@@ -1,6 +1,7 @@
 import 'package:dotted_line/dotted_line.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:tokenapp/routes.dart';
 import 'package:tokenapp/utils/AppCustomColors.dart';
 
 
@@ -136,15 +137,20 @@ class _ScanPageState extends State<ScanPage> {
                 const SizedBox(height: 5.0,),
                 const Text("Dakota 83475", style: TextStyle(fontWeight: FontWeight.normal,fontSize: 16.0, color: AppCustomColors.textDarkColor),),
                 const SizedBox(height: 30.0,),
-                Padding(
-                  padding: const EdgeInsets.only(left: 30.0, right: 30.0),
-                  child: Container(
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(50.0),
-                      gradient: const LinearGradient(colors: [AppCustomColors.buttonStartColor, AppCustomColors.buttonEndColor])
+                InkWell(
+                  onTap: (){
+                    Navigator.pushNamed(context, Routes.claimOne);
+                  },
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 30.0, right: 30.0),
+                    child: Container(
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50.0),
+                        gradient: const LinearGradient(colors: [AppCustomColors.buttonStartColor, AppCustomColors.buttonEndColor])
+                      ),
+                      child: const Padding(padding: EdgeInsets.all(15.0), child: Text("Scan to Reedem", style: TextStyle(fontWeight: FontWeight.normal, fontSize: 16.0, color: Colors.white),textAlign: TextAlign.center,),),
                     ),
-                    child: const Padding(padding: EdgeInsets.all(15.0), child: Text("Scan to Reedem", style: TextStyle(fontWeight: FontWeight.normal, fontSize: 16.0, color: Colors.white),textAlign: TextAlign.center,),),
                   ),
                 ),
               ],

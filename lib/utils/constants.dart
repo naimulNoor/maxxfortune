@@ -1,5 +1,5 @@
 class AssetConstants {
-  static const base_path = "assets/images/";
+  static const base_path = "images/";
   static const ic_profile = base_path + "ic_profile.svg";
   static const ic_settings = base_path + "ic_settings.svg";
   static const ic_language = base_path + "ic_language.svg";
@@ -38,6 +38,11 @@ class AssetConstants {
   static const vehicleIcon = base_icon_path + "ic_vehicle.svg";
   static const lostandFoundIcon = base_icon_path + "ic_lost_and_found.svg";
 
+  //active icon
+  static const specialIconactive = base_icon_path + "empty_wallet_active.svg";
+  // static const walletIcon = base_icon_path + "empty-wallet.svg";
+  // static const homeIcon = base_icon_path + "home.svg";
+  // static const menuIcon = base_icon_path + "menu.svg";
 
   //token app
   static const specialIcon = base_icon_path + "card-pos.svg";

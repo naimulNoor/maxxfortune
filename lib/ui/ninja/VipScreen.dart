@@ -4,6 +4,8 @@ import 'package:tokenapp/routes.dart';
 import 'package:tokenapp/utils/AppCustomColors.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 
+import 'MembershipScreen.dart';
+
 class VipPage extends StatefulWidget {
   const VipPage({Key? key}) : super(key: key);
 
@@ -12,6 +14,13 @@ class VipPage extends StatefulWidget {
 }
 
 class _VipPageState extends State<VipPage> {
+  var result;
+
+  @override
+  void didChangeDependencies() async{
+
+    super.didChangeDependencies();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,11 +42,17 @@ class _VipPageState extends State<VipPage> {
     return Padding(
       padding: const EdgeInsets.all(10.0),
       child: InkWell(
-        onTap: (){
-          Navigator.pushNamed(
+        onTap: () async{
+          result=Navigator.pushNamed(
             context,
             Routes.addCard,
           );
+          print("datad");
+          print("${ await result}");
+          if(await result=="success"){
+            showCardDialog(context);
+          }
+
         },
         child: Container(
           height: 80.0,
@@ -107,7 +122,7 @@ class _VipPageState extends State<VipPage> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const Text("Monthly Membership", style: TextStyle(fontWeight: FontWeight.w400, fontSize: 22.0, color: Colors.white),),
-                  SvgPicture.asset("assets/images/ic_qr.svg")
+                  SvgPicture.asset("images/ic_qr.svg")
                 ],
               ),
             ),
@@ -140,3 +155,12 @@ class _VipPageState extends State<VipPage> {
     );
   }
 }
+
+
+void showCardDialog(BuildContext context) {
+
+  Dialog errorDialog = Dialog(
+    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)), //this right here
+    child: MembershipPage(),
+  );
+  showDialog(context: context, builder: (BuildContext context) => errorDialog);}

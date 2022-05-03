@@ -73,7 +73,7 @@ class _AddCardPageState extends State<AddCardPage> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          SvgPicture.asset("assets/images/ic_scan.svg"),
+                          SvgPicture.asset("images/ic_scan.svg"),
                           SizedBox(width: 10.0,),
                           Text("ADD A BARCODE", style: TextStyle(fontWeight: FontWeight.normal,fontSize: 13.0, letterSpacing: 2.0, color: Colors.black45,),)
                         ],
@@ -109,14 +109,19 @@ class _AddCardPageState extends State<AddCardPage> {
                     ),
                   ),
                   const SizedBox(height: 20,),
-                  Container(
-                    height: 55,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(50.0),
-                      gradient: const LinearGradient(colors: [AppCustomColors.buttonStartColor,AppCustomColors.buttonEndColor])
-                    ),
-                    child: const Center(
-                      child: Text("Save Card", style: TextStyle(fontWeight: FontWeight.normal, fontSize: 15.0, color: Colors.white),),
+                  InkWell(
+                    onTap: (){
+                      Navigator.pop(context,"success");
+                    },
+                    child: Container(
+                      height: 55,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50.0),
+                        gradient: const LinearGradient(colors: [AppCustomColors.buttonStartColor,AppCustomColors.buttonEndColor])
+                      ),
+                      child: const Center(
+                        child: Text("Save Card", style: TextStyle(fontWeight: FontWeight.normal, fontSize: 15.0, color: Colors.white),),
+                      ),
                     ),
                   ),
                   const SizedBox(height: 40,),

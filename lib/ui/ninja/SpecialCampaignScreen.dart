@@ -71,7 +71,7 @@ class _SpecialCampaignPageState extends State<SpecialCampaignPage> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const Text("StarBucks", style: TextStyle(fontWeight: FontWeight.normal,fontSize: 18.0, color: Colors.white),),
-                  SvgPicture.asset("assets/images/ic_starbucks.svg")
+                  SvgPicture.asset("images/ic_starbucks.svg")
                 ],
               ),
             ),

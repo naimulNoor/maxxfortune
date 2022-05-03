@@ -30,29 +30,30 @@ class _MyStatefulWidgetState extends State<WidgetNavigation> {
 
   @override
   void initState() {
-    if(widget.path=="home"){
-      home = SvgPicture.asset("images/icons/home_active.svg");
-      wallet =SvgPicture.asset(AssetConstants.walletIcon);
-      special =SvgPicture.asset(AssetConstants.specialIcon,);
-      menu =SvgPicture.asset(AssetConstants.menuIcon,);
-    }else if (widget.path=="wallet"){
-      home =SvgPicture.asset(AssetConstants.homeIcon,);
-      wallet =SvgPicture.asset("images/wallet_active.svg");
-      special =SvgPicture.asset(AssetConstants.specialIcon,);
-      menu =SvgPicture.asset(AssetConstants.menuIcon,);
+    //TODO need to work
+    // if(widget.path=="home"){
+    //   home = SvgPicture.asset("images/icons/home_active.svg");
+    //   wallet =SvgPicture.asset(AssetConstants.walletIcon);
+    //   special =SvgPicture.asset(AssetConstants.specialIcon,);
+    //   menu =SvgPicture.asset(AssetConstants.menuIcon,);
+    // }else if (widget.path=="wallet"){
+    //   home =SvgPicture.asset(AssetConstants.homeIcon,);
+    //   wallet =SvgPicture.asset("images/wallet_active.svg");
+    //   special =SvgPicture.asset(AssetConstants.specialIcon,);
+    //   menu =SvgPicture.asset(AssetConstants.menuIcon,);
+    //
+    // }else if (widget.path=="special"){
+    //   home =SvgPicture.asset(AssetConstants.homeIcon,);
+    //   wallet =SvgPicture.asset(AssetConstants.walletIcon);
+    //   special =SvgPicture.asset(AssetConstants.specialIcon);
+    //   menu =SvgPicture.asset(AssetConstants.menuIcon,);
+    // }
 
-    }else if (widget.path=="special"){
-      home =SvgPicture.asset(AssetConstants.homeIcon,);
-      wallet =SvgPicture.asset(AssetConstants.walletIcon);
-      special =SvgPicture.asset("images/special_active.svg");
-      menu =SvgPicture.asset(AssetConstants.menuIcon,);
-    }
-    else{
        home =SvgPicture.asset(AssetConstants.homeIcon,);
        wallet =SvgPicture.asset(AssetConstants.walletIcon);
        special =SvgPicture.asset(AssetConstants.specialIcon,);
-       menu = SvgPicture.asset(AssetConstants.menu_active,);
-    }
+       menu = SvgPicture.asset(AssetConstants.menuIcon,);
+
     super.initState();
   }
   void _onItemTapped(int index) {
