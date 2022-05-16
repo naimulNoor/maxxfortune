@@ -135,7 +135,7 @@ class _FaqViewState extends State<UpdateInformationPage> {
 
 }
 
-class TitleWidget extends StatelessWidget {
+class TitleWidget extends StatelessWidget  {
   const TitleWidget({
     Key? key,
   }) : super(key: key);
