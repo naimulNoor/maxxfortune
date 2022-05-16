@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tokenapp/utils/AppCustomColors.dart';
 
+import 'RewardScreen.dart';
+
 
 
 class DailyRewardPage extends StatefulWidget {
@@ -53,7 +55,7 @@ class _DailyRewardPageState extends State<DailyRewardPage> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          SvgPicture.asset("images/ic_coin.svg"),
+                          Image.asset("images/icons/lion.png",height: 18,width: 18,),
                           const SizedBox(
                             width: 5.0,
                           ),
@@ -81,9 +83,14 @@ class _DailyRewardPageState extends State<DailyRewardPage> {
                       ],
                     ),
                   ),
-                  child: const Padding(
-                    padding: EdgeInsets.fromLTRB(8.0,5.0,8.0,5.0),
-                    child: Text("Claim", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15.0, color: Colors.white,letterSpacing: 1),),
+                  child: InkWell(
+                    child: const Padding(
+                      padding: EdgeInsets.fromLTRB(8.0,5.0,8.0,5.0),
+                      child: Text("Claim", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15.0, color: Colors.white,letterSpacing: 1),),
+                    ),
+                    onTap: () {
+                      showDialog(context: context, builder: (context) { return _showDialog();});
+                    },
                   ),
                 )
               ],
@@ -92,4 +99,12 @@ class _DailyRewardPageState extends State<DailyRewardPage> {
       ),
     );
   }
+
+  Widget _showDialog(){
+    return Dialog(
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)),
+      child: RewardPage(),
+    );
+  }
+
 }
