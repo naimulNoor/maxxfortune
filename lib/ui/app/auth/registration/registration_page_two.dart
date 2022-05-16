@@ -14,6 +14,7 @@ import 'package:tokenapp/ui/common_widgets/positive_button.dart';
 import 'package:tokenapp/ui/container/UIConstants/Colors.dart';
 import 'package:tokenapp/ui/container/UIConstants/GSWidgetStyles.dart';
 import 'package:tokenapp/ui/container/UIConstants/Strings.dart';
+import 'package:tokenapp/ui/ninja/CreateAccountScreenTwo.dart';
 
 import 'package:tokenapp/utils/constants.dart';
 import 'package:tokenapp/utils/dimens.dart';
@@ -59,12 +60,6 @@ class _LoginPageViewState extends State<RegistrationTwoPage> {
 
     nameController = TextEditingController();
     nameController.text="";
-
-
-
-
-
-
 
   }
 
@@ -116,7 +111,7 @@ class _LoginPageViewState extends State<RegistrationTwoPage> {
                   ),
                   SizedBox(height: 50,),
                  WidgetInputOtpField(
-                   margin:EdgeInsets.symmetric(horizontal: 30.0),
+                   margin:EdgeInsets.symmetric(horizontal: 10.0),
                  ),
                  Column(
                    children: [
@@ -127,7 +122,7 @@ class _LoginPageViewState extends State<RegistrationTwoPage> {
                          Navigator.push(
                            context,
                            MaterialPageRoute(
-                             builder: (context) => (RegistrationThreePage()),
+                             builder: (context) => (CreateAccountThreeScreenPage()),
                            ),
                          );
                        },
@@ -138,7 +133,6 @@ class _LoginPageViewState extends State<RegistrationTwoPage> {
                      )
                    ],
                  ),
-
                 ],
               ),
             ),

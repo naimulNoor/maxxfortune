@@ -71,7 +71,7 @@ class Routes {
     claimReward: (BuildContext context) => const ClaimRewardPageWithCheck(),
     congratulation: (BuildContext context) => const CongratulationPage(),
     createAccOne: (BuildContext context) => const CreateAccountOneScreenPage(),
-    createAccTwo: (BuildContext context) => const CreateAccountTwoScreenPage(),
+    createAccTwo: (BuildContext context) => const CreateAccountThreeScreenPage(),
     notifications: (BuildContext context) => const NotificationPage(),
     givenReward: (BuildContext context) => const RewardPage(),
     success: (BuildContext context) => const SuccessScreen(),

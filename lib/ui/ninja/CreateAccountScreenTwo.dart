@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 import '../../Utils/AppCustomColors.dart';
 
-class CreateAccountTwoScreenPage extends StatefulWidget {
-  const CreateAccountTwoScreenPage({Key? key}) : super(key: key);
+class CreateAccountThreeScreenPage extends StatefulWidget {
+  const CreateAccountThreeScreenPage({Key? key}) : super(key: key);
 
   @override
-  State<CreateAccountTwoScreenPage> createState() => _CreateAccountTwoScreenPageState();
+  State<CreateAccountThreeScreenPage> createState() => _CreateAccountThreeScreenPageState();
 }
 
-class _CreateAccountTwoScreenPageState extends State<CreateAccountTwoScreenPage> {
+class _CreateAccountThreeScreenPageState extends State<CreateAccountThreeScreenPage> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -71,7 +71,7 @@ class _CreateAccountTwoScreenPageState extends State<CreateAccountTwoScreenPage>
                 ),
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Image.asset("assets/images/man.png"),
+                  child: Image.asset("images/man.png"),
                 ),
               ),
               Container(
@@ -84,7 +84,7 @@ class _CreateAccountTwoScreenPageState extends State<CreateAccountTwoScreenPage>
                 ),
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Image.asset("assets/images/woman.png"),
+                  child: Image.asset("images/woman.png"),
                 ),
               ),
               Container(
@@ -97,7 +97,7 @@ class _CreateAccountTwoScreenPageState extends State<CreateAccountTwoScreenPage>
                 ),
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Image.asset("assets/images/man.png"),
+                  child: Image.asset("images/man.png"),
                 ),
               ),
               Container(
@@ -110,7 +110,7 @@ class _CreateAccountTwoScreenPageState extends State<CreateAccountTwoScreenPage>
                 ),
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Image.asset("assets/images/woman.png"),
+                  child: Image.asset("images/woman.png"),
                 ),
               ),
             ],

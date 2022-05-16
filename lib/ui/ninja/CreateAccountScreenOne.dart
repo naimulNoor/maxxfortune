@@ -1,5 +1,6 @@
 import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:tokenapp/ui/app/auth/registration/registration_page_two.dart';
 import '../../Utils/AppCustomColors.dart';
 
 class CreateAccountOneScreenPage extends StatefulWidget {
@@ -140,7 +141,10 @@ class _CreateAccountOneScreenPageState
                   ],
                 ),
               ),
-              child: const Padding(padding: EdgeInsets.all(15.0), child: Text("Next", style: TextStyle(fontWeight: FontWeight.normal, fontSize: 15.0, color: Colors.white), textAlign: TextAlign.center,)
+              child: InkWell(
+                child: const Padding(padding: EdgeInsets.all(15.0), child: Text("Next", style: TextStyle(fontWeight: FontWeight.normal, fontSize: 15.0, color: Colors.white), textAlign: TextAlign.center,),
+                ),
+                onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => (RegistrationTwoPage())));},
               ),
             ),
           ),

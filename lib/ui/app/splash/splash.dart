@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tokenapp/ui/ninja/CreateAccountScreenOne.dart';
 import 'package:tokenapp/ui/ninja/dialog_scratch.dart';
 import 'package:tokenapp/widgets/widget_button.dart';
 
@@ -81,7 +82,9 @@ class _SplashScreenState extends State<SplashScreen> {
                       ,),
                     Container(
                   child: InkWell(
-                    onTap: (){},
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => (CreateAccountOneScreenPage())));
+                    },
                     child: Container(
                       margin: EdgeInsets.symmetric(horizontal: 30.0),
                       height: 48,
