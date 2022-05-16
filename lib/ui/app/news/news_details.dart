@@ -7,7 +7,7 @@ import 'package:tokenapp/data/models/contuctus/model_contuct_us.dart';
 
 
 class NewsDetailsPage extends StatefulWidget {
-  const NewsDetailsPage({Key? key}) : super(key: key);
+  const  NewsDetailsPage({Key? key}) : super(key: key);
 
   @override
   _FaqViewState createState() => _FaqViewState();

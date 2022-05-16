@@ -7,7 +7,7 @@ import 'package:tokenapp/ui/app/news/news_details.dart';
 
 
 class NewsListPage extends StatefulWidget {
-  const NewsListPage({Key? key}) : super(key: key);
+  const  NewsListPage({Key? key}) : super(key: key);
 
   @override
   _FaqViewState createState() => _FaqViewState();
@@ -56,7 +56,6 @@ class _FaqViewState extends State<NewsListPage> {
                     scrollDirection: Axis.vertical,
                     itemBuilder: (context, i) {
                       return InkWell(
-
                           onTap:(){
                             Navigator.push(
                               context,
@@ -66,9 +65,8 @@ class _FaqViewState extends State<NewsListPage> {
                             );
                         },
                         child: Container(
-                          margin: EdgeInsets.fromLTRB(32, 0, 0, 10),
+                          margin: EdgeInsets.fromLTRB(10, 0, 0, 20),
                           decoration: BoxDecoration(
-
 
                           ),
                           child: Row(
@@ -86,22 +84,18 @@ class _FaqViewState extends State<NewsListPage> {
                                     )
                                 ),
                               ),
-                              Container(
-                                padding: EdgeInsets.all(20.0),
+                              SizedBox(width: 20.0,),
+                              Expanded(
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
                                     Text("24 May, 2020",style: TextStyle(color: Color(0xff95A0AE),fontSize: 13.0),),
                                     SizedBox(height: 8,),
-                                    Container(
-                                        width: 165,
-                                        child: Text("Fun Fall Craft Ideas for Mask New Life Toddlers.",style: TextStyle(color: Color(0xff11243D),fontSize: 15.0,fontWeight: FontWeight.w500),))
+                                    Text("Fun Fall Craft Ideas for Mask New Life Toddlers.",style: TextStyle(color: Color(0xff11243D),fontSize: 15.0,fontWeight: FontWeight.w500),)
                                   ],
                                 ),
                               ),
-
-
                             ],
                           ),
                         ),
@@ -137,10 +131,10 @@ class TitleWidget extends StatelessWidget {
               ),
             ),
           ),
-          SafeArea(child: Container(
-              height: 300,
+          Container(
+              height: 350,
               width: MediaQuery.of(context).size.width,
-              margin: EdgeInsets.fromLTRB(20, 0, 0, 0),
+              margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -154,7 +148,7 @@ class TitleWidget extends StatelessWidget {
                   ),
                   Expanded(
                     child: Container(
-                        margin: EdgeInsets.fromLTRB(32, 10, 20, 0),
+                        margin: EdgeInsets.fromLTRB(32, 10, 0, 10),
                       child: ListView.builder(
                         itemCount: 6,
                         scrollDirection: Axis.horizontal,
@@ -187,36 +181,26 @@ class TitleWidget extends StatelessWidget {
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
-                                      Text("24 May, 2020",style: TextStyle(color: Color(0xff95A0AE),fontSize: 13.0),),
-                                      SizedBox(height: 8,),
+                                      SizedBox(height: 15.0,),
+                                      Text("24 May, 2020",style: TextStyle(color: Color(0xff95A0AE),fontSize: 13.0,letterSpacing: 1),),
+                                      SizedBox(height: 15.0,),
                                       Text("Fun Fall Craft Ideas for Mask New Life Toddlers.",style: TextStyle(color: Color(0xff11243D),fontSize: 15.0,fontWeight: FontWeight.w500),)
                                     ],
                                   ),
                                 ),
 
-
                               ],
                             ),
                           );
-
                         },
                       )
                     ),
                   )
                 ],
-              ))
-          )
+              )),
         ]);
   }
 }
-
-
-
-
-
-
-
-
 
 
 class FaqItemWidget extends StatefulWidget {

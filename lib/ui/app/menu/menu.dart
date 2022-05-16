@@ -84,7 +84,7 @@ class _FaqViewState extends State<WidgetMenu> {
                                ),
                              );
                            },
-                           title:"Refer and Earn",
+                           title:"News & Blog",
                            subtitle: "News & Lates Update",
                            icon: SvgPicture.asset(AssetConstants.news,height: 40,width: 40,),
                            iconColor: Color(0xff2E7BE4),
@@ -93,8 +93,8 @@ class _FaqViewState extends State<WidgetMenu> {
                          ),
                          WidgetMenuListTile(
                              onTap: (){},
-                            title:"News & Blog",
-                            subtitle: "News & Lates Update",
+                            title:"Refer and Earn",
+                            subtitle: "Control Your Videos",
                             icon: SvgPicture.asset(AssetConstants.refer,height: 40,width: 40,),
                             iconColor: Color(0xff2E7BE4),
                             subTitleColor: Color(0xff787B8C),
