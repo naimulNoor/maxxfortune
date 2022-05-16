@@ -14,4 +14,7 @@ class AppCustomColors{
   static const backgroundColor = Color(0xFFF5F5F5);
   static const cardPinkColor = Color(0xFFE3005F);
   static const dialogBorderColor = Color(0xFFFF3E75);
+  static const lightCreamBlue = Color(0xFFC6BDE4);
+  static const createAccPageStartColor = Color(0xFFFFFCF5);
+  static const createAccPageEndColor = Color(0xFFFFF3F3);
 }

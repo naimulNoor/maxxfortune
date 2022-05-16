@@ -42,6 +42,8 @@ dependencies:
   simple_tooltip: ^1.0.0
   dotted_line: ^3.1.0
   simple_gradient_text: ^1.2.2
+  country_code_picker: ^2.0.2
+  webview_flutter_plus: ^0.3.0+2
 
   # Data
   get_storage: ^2.0.1

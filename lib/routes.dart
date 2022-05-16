@@ -1,14 +1,21 @@
 
 import 'package:flutter/material.dart';
 import 'package:tokenapp/ui/ninja/AddCardScreen.dart';
+import 'package:tokenapp/ui/ninja/ClaimRewardScreen.dart';
 import 'package:tokenapp/ui/ninja/ClaimScreenOne.dart';
 import 'package:tokenapp/ui/ninja/ClaimScreenTwo.dart';
+import 'package:tokenapp/ui/ninja/CongratulationsScreen.dart';
+import 'package:tokenapp/ui/ninja/CreateAccountScreenOne.dart';
+import 'package:tokenapp/ui/ninja/CreateAccountScreenTwo.dart';
 
 import 'package:tokenapp/ui/ninja/DailyRewardScreen.dart';
 import 'package:tokenapp/ui/ninja/DiscountScreen.dart';
 import 'package:tokenapp/ui/ninja/EarnCreditScreen.dart';
 import 'package:tokenapp/ui/ninja/MembershipScreen.dart';
+import 'package:tokenapp/ui/ninja/NotificationScreen.dart';
+import 'package:tokenapp/ui/ninja/RewardScreen.dart';
 import 'package:tokenapp/ui/ninja/ScanScreen.dart';
+import 'package:tokenapp/ui/ninja/SuccessScreen.dart';
 import 'package:tokenapp/ui/ninja/dialog_scratch.dart';
 import 'package:tokenapp/ui/ninja/RedeemCoinScreen.dart';
 import 'package:tokenapp/ui/ninja/SpecialCampaignScreen.dart';
@@ -35,8 +42,16 @@ class Routes {
   static const String earnCredit = '/earnCredit';
   static const String membership = '/membership';
   static const String scanScreen = '/scanScreen';
+  static const String claimReward = '/claimReward';
+  static const String congratulation= '/congratulation';
+  static const String createAccOne = '/createAccountScreenOne';
+  static const String createAccTwo = '/createAccountScreenTwo';
+  static const String notifications = '/notifications';
+  static const String givenReward = '/givenReward';
+  static const String success = '/success';
 
   static final routes = <String, WidgetBuilder>{
+
     dialog_scratch: (BuildContext context) => const DialogScratchPage(),
     discount: (BuildContext context) =>const DiscountPage(),
     redeemCoin: (BuildContext context) => const RedeemCoinPage(),
@@ -52,6 +67,14 @@ class Routes {
     earnCredit: (BuildContext context) => const EarnCreditPage(),
     membership: (BuildContext context) => const MembershipPage(),
     scanScreen: (BuildContext context) => const ScanPage(),
+
+    claimReward: (BuildContext context) => const ClaimRewardPageWithCheck(),
+    congratulation: (BuildContext context) => const CongratulationPage(),
+    createAccOne: (BuildContext context) => const CreateAccountOneScreenPage(),
+    createAccTwo: (BuildContext context) => const CreateAccountTwoScreenPage(),
+    notifications: (BuildContext context) => const NotificationPage(),
+    givenReward: (BuildContext context) => const RewardPage(),
+    success: (BuildContext context) => const SuccessScreen(),
   };
 }
 

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:badges/badges.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:tokenapp/constants.dart';
+import 'package:tokenapp/ui/ninja/NotificationScreen.dart';
 import 'package:tokenapp/utils/constants.dart';
 class WidgetTopBar extends StatefulWidget {
   Container leftIcon;
@@ -45,7 +46,7 @@ class _WidgetTopBarState extends State<WidgetTopBar> {
                       stops: [0.0, 1.0],
                       tileMode: TileMode.clamp),
                       ),
-                      child: SvgPicture.asset(AssetConstants.notification)
+                      child: InkWell(child: SvgPicture.asset(AssetConstants.notification), onTap: () { Navigator.push(context, MaterialPageRoute(builder: (context) => (NotificationPage()),),); },)
                       ),
                       Positioned(
                         child: CircleAvatar(

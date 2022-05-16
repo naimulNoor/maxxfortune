@@ -75,12 +75,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     SizedBox(height: 40,),
                     WidgetButton(title: "Login to Account", onTap: (){
 
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => (HomePage()),
-                          ),
-                        );
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => (HomePage()),),);
                     }, margin: EdgeInsets.symmetric(horizontal: 30.0),),
                     SizedBox(height: 20
                       ,),
