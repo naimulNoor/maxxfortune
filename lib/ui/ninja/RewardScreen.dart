@@ -14,10 +14,10 @@ class _RewardPageState extends State<RewardPage> {
   Widget build(BuildContext context) {
     return Container(
       width: 300,
-      height: 320,
+      height: 350,
       decoration: BoxDecoration(
           color: Colors.transparent,
-          borderRadius: BorderRadius.circular(5.0),
+          borderRadius: BorderRadius.circular(12.0),
           border: Border.all(color: Colors.red, width: 1.0)),
       child: Column(
         children: [
@@ -60,7 +60,7 @@ class _RewardPageState extends State<RewardPage> {
           const SizedBox(height: 10,),
           const Text("Uniquely Communicate Real-Time", style: TextStyle(fontSize: 13.0, fontWeight: FontWeight.normal, color: Colors.black),),
           const Text("\"Outside the Box\" Thinking", style: TextStyle(fontSize: 13.0, fontWeight: FontWeight.normal, color: Colors.black),),
-          const SizedBox(height: 30.0,),
+          const SizedBox(height: 25.0,),
           Padding(
             padding: const EdgeInsets.only(bottom: 15.0),
             child: Container(
