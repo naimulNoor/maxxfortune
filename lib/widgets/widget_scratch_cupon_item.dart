@@ -23,8 +23,8 @@ class _WidgetButtonState extends State<WidgetScratchCuponItem> {
   Widget build(BuildContext context) {
 
     return Container(
-        width: 180,
-        height: 180,
+        width: 160,
+        height: 160,
         margin: EdgeInsets.only(top: 40.0),
         decoration: BoxDecoration(
             color: Colors.white,

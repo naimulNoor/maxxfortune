@@ -22,40 +22,37 @@ class _WidgetTopBarState extends State<WidgetTopBar> {
     return Container(
       child:Row(
           children: [
-            Expanded(
-              flex: 1,
-              child: Container(
+            Container(
 
-                child: Align(
-                  alignment: Alignment.centerLeft,
-                  child: Stack(
-                    alignment: Alignment.topRight,
-                    children: [
-                      Container(
-                      height: 40,
-                      width: 40,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(50.0),
-                      gradient: LinearGradient(
-                          colors: [
-                           color_lightorange,
-                           color_red,
-                        ],
-                        begin: const FractionalOffset(0.0, 0.0),
-                      end: const FractionalOffset(1.0, 0.0),
-                      stops: [0.0, 1.0],
-                      tileMode: TileMode.clamp),
-                      ),
-                      child: InkWell(child: SvgPicture.asset(AssetConstants.notification), onTap: () { Navigator.push(context, MaterialPageRoute(builder: (context) => (NotificationPage()),),); },)
-                      ),
-                      Positioned(
-                        child: CircleAvatar(
-                            backgroundColor: Colors.white,
-                            radius: 8,
-                            child: CircleAvatar(backgroundColor: Colors.amber,radius: 6,)),
-                      ),
-                    ],
-                  ),
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: Stack(
+                  alignment: Alignment.topRight,
+                  children: [
+                    Container(
+                        height: 40,
+                        width: 40,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(50.0),
+                          gradient: LinearGradient(
+                              colors: [
+                                color_lightorange,
+                                color_red,
+                              ],
+                              begin: const FractionalOffset(0.0, 0.0),
+                              end: const FractionalOffset(1.0, 0.0),
+                              stops: [0.0, 1.0],
+                              tileMode: TileMode.clamp),
+                        ),
+                        child: InkWell(child: SvgPicture.asset(AssetConstants.notification), onTap: () { Navigator.push(context, MaterialPageRoute(builder: (context) => (NotificationPage()),),); },)
+                    ),
+                    Positioned(
+                      child: CircleAvatar(
+                          backgroundColor: Colors.white,
+                          radius: 8,
+                          child: CircleAvatar(backgroundColor: Colors.amber,radius: 6,)),
+                    ),
+                  ],
                 ),
               ),
             ),
@@ -64,26 +61,22 @@ class _WidgetTopBarState extends State<WidgetTopBar> {
                 child: Container(
 
                     child: Image.asset(widget.centerImage,height: 30,))),
-            Expanded(
-              flex: 1,
-              child: Container(
+            Container(
 
-                child: Row(
-                  children: [
-                    Row(
-                      children: [
-                        Image.asset("images/icons/lion.png",height: 40,width: 40,),
-                        SizedBox(width: 5,),
-                        Text(widget.count,style: TextStyle(color: colortitle,fontWeight: FontWeight.bold),)
-                      ],
-                    ),
-                    SizedBox(width: 10,),
-                    Icon(Icons.add_circle,color: Color(0xff11243D),size: 40.0,)
-                  ],
-                ),
+              child: Row(
+                children: [
+                  Row(
+                    children: [
+                      Image.asset("images/icons/lion.png",height: 40,width: 40,),
+                      SizedBox(width: 5,),
+                      Text(widget.count,style: TextStyle(color: colortitle,fontWeight: FontWeight.bold),)
+                    ],
+                  ),
+                  SizedBox(width: 10,),
+                  Icon(Icons.add_circle,color: Color(0xff11243D),size: 40.0,)
+                ],
               ),
-          ),
-
+            ),
         ],
       )
     );
