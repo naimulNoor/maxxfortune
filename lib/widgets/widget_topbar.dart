@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:badges/badges.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:tokenapp/constants.dart';
+import 'package:tokenapp/routes.dart';
 import 'package:tokenapp/ui/ninja/NotificationScreen.dart';
+import 'package:tokenapp/ui/ninja/RedeemCoinScreen.dart';
 import 'package:tokenapp/utils/constants.dart';
 class WidgetTopBar extends StatefulWidget {
   Container leftIcon;
@@ -73,7 +75,7 @@ class _WidgetTopBarState extends State<WidgetTopBar> {
                     ],
                   ),
                   SizedBox(width: 10,),
-                  Icon(Icons.add_circle,color: Color(0xff11243D),size: 40.0,)
+                  InkWell(child: Icon(Icons.add_circle,color: Color(0xff11243D),size: 40.0,), onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => (RedeemCoinPage()),),);},)
                 ],
               ),
             ),

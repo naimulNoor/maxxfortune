@@ -35,7 +35,7 @@ class _RedeemCoinPageState extends State<RedeemCoinPage> {
               ),
               Positioned(
                 child: _watchButton(),
-                bottom: 5,
+                bottom: 0,
                 left: 40,
                 right: 40,
               )
@@ -116,16 +116,19 @@ class _RedeemCoinPageState extends State<RedeemCoinPage> {
   /// Body
   Widget _body() {
     return Expanded(
-        child: GridView.builder(
+        child: Padding(
+          padding: const EdgeInsets.only(bottom: 70.0),
+          child: GridView.builder(
       physics: const BouncingScrollPhysics(),
       shrinkWrap: true,
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2, childAspectRatio: 0.9),
+            crossAxisCount: 2, childAspectRatio: 0.9),
       itemCount: 10,
       itemBuilder: (context, index) {
-        return _gridItem();
+          return _gridItem();
       },
-    ));
+    ),
+        ));
   }
 
   /// Grid Item
@@ -193,13 +196,14 @@ class _RedeemCoinPageState extends State<RedeemCoinPage> {
   /// Watch Button
   Widget _watchButton() {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 15.0),
+      padding: const EdgeInsets.only(bottom: 20.0),
       child: InkWell(
         onTap: (){
           Navigator.pushNamed(context, Routes.earnCredit);
         },
         child: Container(
           width: MediaQuery.of(context).size.width / 1.5,
+          height: 43.0,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(25.0),
             gradient: const LinearGradient(
