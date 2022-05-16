@@ -14,14 +14,12 @@ class DailyRewardPage extends StatefulWidget {
 class _DailyRewardPageState extends State<DailyRewardPage> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: Container(
-          color: Colors.white24,
-          child: ListView.builder(
-            itemBuilder: (context, item) => _listItem(),
-            itemCount: 10,
-          ),
+    return Scaffold(
+      body: Container(
+        color: AppCustomColors.backgroundColor,
+        child: ListView.builder(
+          itemBuilder: (context, item) => _listItem(),
+          itemCount: 10,
         ),
       ),
     );
