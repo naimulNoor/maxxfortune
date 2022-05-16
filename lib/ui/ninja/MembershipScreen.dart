@@ -13,12 +13,12 @@ class _MembershipPageState extends State<MembershipPage> {
   @override
   Widget build(BuildContext context) {
     return  Container(
-          height: 320.0,
+          height: 330.0,
           width: MediaQuery.of(context).size.width - 40,
           decoration: BoxDecoration(
               border: Border.all(
                   width: 1.0, color: AppCustomColors.dialogBorderColor),
-              borderRadius: BorderRadius.circular(15.0)),
+              borderRadius: BorderRadius.circular(12.0)),
           child: Column(
             children: [
               const SizedBox(

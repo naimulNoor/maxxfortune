@@ -47,8 +47,8 @@ class _VipPageState extends State<VipPage> {
             context,
             Routes.addCard,
           );
-          print("datad");
-          print("${ await result}");
+          // print("datad");
+          // print("${ await result}");
           if(await result=="success"){
             showCardDialog(context);
           }
@@ -108,49 +108,54 @@ class _VipPageState extends State<VipPage> {
   Widget _listItem() {
     return Padding(
       padding: const EdgeInsets.fromLTRB(10.0, 8.0, 10.0, 8.0),
-      child: Container(
-        height: 160,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(15.0),
-          color: AppCustomColors.cardPinkColor
-        ),
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.fromLTRB(15.0,15.0,15.0,15.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const Text("Monthly Membership", style: TextStyle(fontWeight: FontWeight.w400, fontSize: 22.0, color: Colors.white),),
-                  SvgPicture.asset("images/ic_qr.svg")
-                ],
+      child: InkWell(
+        child: Container(
+          height: 160,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(15.0),
+            color: AppCustomColors.cardPinkColor
+          ),
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.fromLTRB(15.0,15.0,15.0,15.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Text("Monthly Membership", style: TextStyle(fontWeight: FontWeight.w400, fontSize: 22.0, color: Colors.white),),
+                    SvgPicture.asset("images/ic_qr.svg")
+                  ],
+                ),
               ),
-            ),
-            const SizedBox(height: 20.0,),
-            Padding(
-              padding: const EdgeInsets.all(15.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
-                      Text("Card Number", style: TextStyle(fontWeight: FontWeight.w400, fontSize: 18.0, color: Colors.white),),
-                      Text("00033430003", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0, color: Colors.white),),
-                    ],
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    children: const [
-                      Text("Issuer", style: TextStyle(fontWeight: FontWeight.w400, fontSize: 18.0, color: Colors.white),),
-                      Text("MTB Organization", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0, color: Colors.white),),
-                    ],
-                  ),
-                ],
-              ),
-            )
-          ],
+              const SizedBox(height: 20.0,),
+              Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                        Text("Card Number", style: TextStyle(fontWeight: FontWeight.w400, fontSize: 18.0, color: Colors.white),),
+                        Text("00033430003", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0, color: Colors.white),),
+                      ],
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: const [
+                        Text("Issuer", style: TextStyle(fontWeight: FontWeight.w400, fontSize: 18.0, color: Colors.white),),
+                        Text("MTB Organization", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0, color: Colors.white),),
+                      ],
+                    ),
+                  ],
+                ),
+              )
+            ],
+          ),
         ),
+        onTap: () {
+          showCardDialog(context);
+        },
       ),
     );
   }
@@ -159,8 +164,8 @@ class _VipPageState extends State<VipPage> {
 
 void showCardDialog(BuildContext context) {
 
-  Dialog errorDialog = Dialog(
+  Dialog dialog = Dialog(
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)), //this right here
     child: MembershipPage(),
   );
-  showDialog(context: context, builder: (BuildContext context) => errorDialog);}
+  showDialog(context: context, builder: (BuildContext context) => dialog);}

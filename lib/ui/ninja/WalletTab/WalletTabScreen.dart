@@ -106,9 +106,9 @@ class _WalletTabPageState extends State<WalletTabPage> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      SvgPicture.asset("/images/ic_coin.svg"),
+                      Image.asset("images/icons/lion.png",height: 18,width: 18,),
                       const SizedBox(
-                        width: 5.0,
+                        width: 2.0,
                       ),
                       const Text(
                         "1.5K ",
@@ -131,8 +131,8 @@ class _WalletTabPageState extends State<WalletTabPage> {
                     );
                   },
                   child: Container(
-                    height: 24,
-                    width: 24,
+                    height: 32,
+                    width: 32,
                     decoration: const BoxDecoration(
                         shape: BoxShape.circle,
                         color: AppCustomColors.textDarkColor),
