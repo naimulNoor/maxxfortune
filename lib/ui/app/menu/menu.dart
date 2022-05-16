@@ -6,7 +6,10 @@ import 'package:tokenapp/data/localdata.dart';
 import 'package:tokenapp/data/models/container/FaqModel.dart';
 import 'package:tokenapp/data/models/container/contactus/ContactUsModel.dart';
 import 'package:tokenapp/data/models/contuctus/model_contuct_us.dart';
+import 'package:tokenapp/ui/app/info/faq/faq_page.dart';
 import 'package:tokenapp/ui/app/info/profile.dart';
+import 'package:tokenapp/ui/app/info/refer/refer_page.dart';
+import 'package:tokenapp/ui/app/info/t&c/tc_page.dart';
 import 'package:tokenapp/ui/app/news/news_list.dart';
 
 import 'package:tokenapp/utils/constants.dart';
@@ -15,6 +18,7 @@ import 'package:tokenapp/widgets/widget_menu_listtile.dart';
 import 'package:tokenapp/widgets/widget_navigation_container.dart';
 
 import '../../../constants.dart';
+import '../info/contact/contact_page.dart';
 import 'account_settings.dart';
 
 class WidgetMenu extends StatefulWidget {
@@ -92,7 +96,14 @@ class _FaqViewState extends State<WidgetMenu> {
                            titleColor: Color(0xff000000)
                          ),
                          WidgetMenuListTile(
-                             onTap: (){},
+                             onTap: (){
+                               Navigator.push(
+                                 context,
+                                 MaterialPageRoute(
+                                   builder: (context) => (ReferPage()),
+                                 ),
+                               );
+                             },
                             title:"Refer and Earn",
                             subtitle: "Control Your Videos",
                             icon: SvgPicture.asset(AssetConstants.refer,height: 40,width: 40,),
@@ -108,7 +119,14 @@ class _FaqViewState extends State<WidgetMenu> {
                         ),),
                         SizedBox(height: 12,),
                         WidgetMenuListTile(
-                            onTap: (){},
+                            onTap: (){
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => (FaqPage( )),
+                                ),
+                              );
+                            },
                             title:"FAQs",
                             subtitle: "News & Lates Update",
                             icon: SvgPicture.asset(AssetConstants.faq,height: 40,width: 40,),
@@ -117,7 +135,14 @@ class _FaqViewState extends State<WidgetMenu> {
                             titleColor: Color(0xff000000)
                         ),
                         WidgetMenuListTile(
-                            onTap: (){},
+                            onTap: (){
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => (ContactPage()),
+                                ),
+                              );
+                            },
                             title:"Contact with US",
                             subtitle: "News & Lates Update",
                             icon: SvgPicture.asset(AssetConstants.contact,height: 40,width: 40,),
@@ -126,7 +151,14 @@ class _FaqViewState extends State<WidgetMenu> {
                             titleColor: Color(0xff000000)
                         ),
                         WidgetMenuListTile(
-                            onTap: (){},
+                            onTap: (){
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => (TCPage()),
+                                ),
+                              );
+                            },
                             title:"Privacy Policy",
                             subtitle: "News & Lates Update",
                             icon: SvgPicture.asset(AssetConstants.privacyIcon,height: 40,width: 40,),

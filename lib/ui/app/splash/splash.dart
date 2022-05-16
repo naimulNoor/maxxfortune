@@ -13,14 +13,14 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
 
-  @override
-  void initState() {
-    Future.delayed(Duration.zero, () {
-      _openScratchDialog();
-    });
-
-    super.initState();
-  }
+  // @override
+  // void initState() {
+  //   Future.delayed(Duration.zero, () {
+  //     _openScratchDialog();
+  //   });
+  //
+  //   super.initState();
+  // }
 
   @override
   Widget build(BuildContext context) {

@@ -50,87 +50,89 @@ class _FaqViewState extends State<ReferPage> {
                 child: TitleWidget()),
             Expanded(
                 flex: 1,
-                child:  Container(
-                      padding: EdgeInsets.symmetric(horizontal: 40.0),
-                      margin: EdgeInsets.fromLTRB(0, 50, 0, 0),
+                child:  SingleChildScrollView(
+                  child: Container(
+                        padding: EdgeInsets.symmetric(horizontal: 40.0),
+                        margin: EdgeInsets.fromLTRB(0, 50, 0, 0),
 
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
 
-                          Column(
-                            children: [
-                              Text("REFERRAL CODE",style: TextStyle(
-                                fontSize: 10.0,
-                                color: Colors.black
-
-                              ),),
-                              SizedBox(height: 15,),
-                              Text("8Q9335",style: TextStyle(
-                                  color: Colors.red,
-                                  fontSize: 34.0,
-                                  fontWeight: FontWeight.bold
-                              ),),
-                              SizedBox(height: 50,),
-                              Text("REFERRAL LINK",style: TextStyle(
+                            Column(
+                              children: [
+                                Text("REFERRAL CODE",style: TextStyle(
                                   fontSize: 10.0,
                                   color: Colors.black
 
-                              ),),
-                              SizedBox(height: 12,),
-                              Text("http://q.tokn.sg/8Q9335",style: TextStyle(
-                                  fontSize: 20.0,
-                                  color: Colors.black
+                                ),),
+                                SizedBox(height: 15,),
+                                Text("8Q9335",style: TextStyle(
+                                    color: Colors.red,
+                                    fontSize: 34.0,
+                                    fontWeight: FontWeight.bold
+                                ),),
+                                SizedBox(height: 50,),
+                                Text("REFERRAL LINK",style: TextStyle(
+                                    fontSize: 10.0,
+                                    color: Colors.black
 
-                              ),),
-                              SizedBox(height: 12,),
-                              Container(
-                                height: 32,
-                                width: 88,
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(50.0),
-                                    border: Border.all(color: Colors.grey)
-                                ),
-                                child: Center(child: Text("Copy Link",style: TextStyle(
-                                    fontSize: 12.0
-                                ),)),
-                              ),
-                            ],
-                          ),
-                          Container(
-                            height: 60,
-                            width: 400,
-                            decoration: BoxDecoration(
-                                image: DecorationImage(
-                                    image:AssetImage("images/refer_price_bg.png",)
-                                )
-                            ),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text("Wow! You made it",style: TextStyle(color: Colors.white,fontSize: 12.0),),
-                                SizedBox(height: 2,),
+                                ),),
+                                SizedBox(height: 12,),
+                                Text("http://q.tokn.sg/8Q9335",style: TextStyle(
+                                    fontSize: 20.0,
+                                    color: Colors.black
+
+                                ),),
+                                SizedBox(height: 12,),
                                 Container(
-                                    width: 180,
-                                    child: Text.rich(
-                                      TextSpan(
-                                        children: [
-                                          TextSpan(text: 'You have won ',style: TextStyle(fontSize: 10,color: Colors.white,)),
-                                          TextSpan(text: '5 days free trail', style: TextStyle(color:Color(0xffFF8800),fontSize: 10,fontWeight: FontWeight.bold),),
-                                          TextSpan(text: ' of the daily diet plan. Enjoy!',style:TextStyle(fontSize: 10,color: Colors.white,), ),
-                                        ],
-                                      ),
-                                      textAlign: TextAlign.center,
-                                    ),)
-
+                                  height: 32,
+                                  width: 88,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(50.0),
+                                      border: Border.all(color: Colors.grey)
+                                  ),
+                                  child: Center(child: Text("Copy Link",style: TextStyle(
+                                      fontSize: 12.0
+                                  ),)),
+                                ),
                               ],
                             ),
-                          )
-                          
-                        ],
-                      )
-                  ),
+                            Container(
+                              height: 60,
+                              width: 400,
+                              decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image:AssetImage("images/refer_price_bg.png",)
+                                  )
+                              ),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text("Wow! You made it",style: TextStyle(color: Colors.white,fontSize: 12.0),),
+                                  SizedBox(height: 2,),
+                                  Container(
+                                      width: 180,
+                                      child: Text.rich(
+                                        TextSpan(
+                                          children: [
+                                            TextSpan(text: 'You have won ',style: TextStyle(fontSize: 10,color: Colors.white,)),
+                                            TextSpan(text: '5 days free trail', style: TextStyle(color:Color(0xffFF8800),fontSize: 10,fontWeight: FontWeight.bold),),
+                                            TextSpan(text: ' of the daily diet plan. Enjoy!',style:TextStyle(fontSize: 10,color: Colors.white,), ),
+                                          ],
+                                        ),
+                                        textAlign: TextAlign.center,
+                                      ),)
+
+                                ],
+                              ),
+                            )
+                            
+                          ],
+                        )
+                    ),
+                ),
                 )
           ],
         ),

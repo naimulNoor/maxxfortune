@@ -45,73 +45,67 @@ class _FaqViewState extends State<ContactPage> {
       ),
       child: Scaffold(
         backgroundColor: Colors.white,
-        resizeToAvoidBottomInset: true,
-        body:  SingleChildScrollView(
-          child: Container(
-            height: MediaQuery.of(context).size.height,
+        resizeToAvoidBottomInset: true, 
+        body:  Container(
+          height: MediaQuery.of(context).size.height,
+            width: MediaQuery.of(context).size.width,
+            child: SingleChildScrollView(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Expanded(
-                    flex: 0,
-                      child: TitleWidget()),
-                  Expanded(
-                    flex: 1,
-                    child: Container(
-                            padding: EdgeInsets.symmetric(horizontal: 40.0),
-                            height: MediaQuery.of(context).size.height,
-                            width: MediaQuery.of(context).size.width,
-                            child: Column(
-                              children: [
-                                SizedBox(height: 30,),
-                                Row(
-                                  children:[
-                                    SvgPicture.asset("images/icons/contact_us_msg.svg",width: 26,height: 26,),
-                                    SizedBox(width: 20.0,),
-                                    Expanded(child: Text("Fill out this form, We ‘ll quickly get back to you.")),
+                  TitleWidget(),
+                  Container(
+                      padding: EdgeInsets.symmetric(horizontal: 40.0),
+                      child: Column(
+                        children: [
+                          SizedBox(height: 30,),
+                          Row(
+                              children:[
+                                SvgPicture.asset("images/icons/contact_us_msg.svg",width: 26,height: 26,),
+                                SizedBox(width: 20.0,),
+                                Expanded(child: Text("Fill out this form, We ‘ll quickly get back to you.")),
 
-                               ]
+                              ]
 
+                          ),
+                          WidgetTextFormField(
+                            formController: emailController,
+                            inputType: TextInputType.text,
+                            hintText: "Your Email Address",
+                            margin:EdgeInsets.symmetric(horizontal: 0.0,vertical: 20.0),
+                            hint: GSStrings.contact_us_full_name,
+                          ),
+                          WidgetTextFormField(
+                            formController: emailController,
+                            inputType: TextInputType.text,
+                            hintText: "Your Message",
+                            minLine: 5,
+                            borderRadius: 16,
+                            margin:EdgeInsets.symmetric(horizontal: 0.0,vertical: 2.0),
+                            hint: GSStrings.contact_us_full_name,
+                            isFieldExpanded: true,
+                            maxLine: 5,
+                          ),
+                          WidgetButton(
+                            title:"Send Message",
+                            margin:EdgeInsets.symmetric(horizontal: 0.0,vertical: 24.0),
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => (ReferPage()),
                                 ),
-                                WidgetTextFormField(
-                                  formController: emailController,
-                                  inputType: TextInputType.text,
-                                  hintText: "Your Email Address",
-                                  margin:EdgeInsets.symmetric(horizontal: 0.0,vertical: 20.0),
-                                  hint: GSStrings.contact_us_full_name,
-                                ),
-                                WidgetTextFormField(
-                                  formController: emailController,
-                                  inputType: TextInputType.text,
-                                  hintText: "Your Message",
-                                  minLine: 5,
-                                  borderRadius: 16,
-                                  margin:EdgeInsets.symmetric(horizontal: 0.0,vertical: 2.0),
-                                  hint: GSStrings.contact_us_full_name,
-                                  isFieldExpanded: true,
-                                  maxLine: 5,
-                                ),
-                                WidgetButton(
-                                  title:"Send Message",
-                                  margin:EdgeInsets.symmetric(horizontal: 0.0,vertical: 24.0),
-                                  onTap: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: (context) => (ReferPage()),
-                                      ),
-                                    );
-                                  },
-                                ),
-                              ],
-                            )
-                    )
-                  ),
+                              );
+                            },
+                          ),
+                        ],
+                      )
+                  )
                 ],
               ),
             ),
-        ),
+          ),
       ),
     );
   }

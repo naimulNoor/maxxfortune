@@ -3,6 +3,7 @@ import 'package:tokenapp/utils/constants.dart';
 import 'package:tokenapp/widgets/widget_button.dart';
 
 import '../constants.dart';
+import '../ui/ninja/dialog_scratch.dart';
 
 class WidgetScratchCuponItem extends StatefulWidget {
  String title;
@@ -77,7 +78,7 @@ class _WidgetButtonState extends State<WidgetScratchCuponItem> {
 
                       ),
                       child: Center(
-                          child: Text("Scratch",style: TextStyle(color: Colors.white),)),
+                          child: InkWell(child: Text("Scratch",style: TextStyle(color: Colors.white),),onTap: () {_openScratchDialog();},)),
                     ),
                   ),
                 )
@@ -106,4 +107,15 @@ class _WidgetButtonState extends State<WidgetScratchCuponItem> {
 
     );
   }
+
+  void _openScratchDialog() {
+    Dialog errorDialog = Dialog(
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)),
+      //this right here
+      child: DialogScratchPage(),
+    );
+    showDialog(
+        context: context, builder: (BuildContext context) => errorDialog);
+  }
+
 }

@@ -2,6 +2,7 @@ import 'package:confetti/confetti.dart';
 import 'package:dotted_line/dotted_line.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:tokenapp/ui/ninja/SuccessScreen.dart';
 import 'package:webview_flutter_plus/webview_flutter_plus.dart';
 import '../../Utils/AppCustomColors.dart';
 import '../../Utils/CustomClipPath.dart';
@@ -177,13 +178,18 @@ class _ClaimRewardPageWithCheckState extends State<ClaimRewardPageWithCheck> {
               const SizedBox(height: 30.0,),
               Padding(
                 padding: const EdgeInsets.only(left: 30.0, right: 30.0),
-                child: Container(
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(50.0),
-                      gradient: const LinearGradient(colors: [AppCustomColors.buttonStartColor, AppCustomColors.buttonEndColor])
+                child: InkWell(
+                  child: Container(
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50.0),
+                        gradient: const LinearGradient(colors: [AppCustomColors.buttonStartColor, AppCustomColors.buttonEndColor])
+                    ),
+                    child: const Padding(padding: EdgeInsets.all(15.0), child: Text("Collect to My Wallet", style: TextStyle(fontWeight: FontWeight.normal, fontSize: 16.0, color: Colors.white),textAlign: TextAlign.center,),),
                   ),
-                  child: const Padding(padding: EdgeInsets.all(15.0), child: Text("Collect to My Wallet", style: TextStyle(fontWeight: FontWeight.normal, fontSize: 16.0, color: Colors.white),textAlign: TextAlign.center,),),
+                  onTap: () {
+                    _openDialog();
+                  },
                 ),
               ),
             ],
@@ -195,4 +201,12 @@ class _ClaimRewardPageWithCheckState extends State<ClaimRewardPageWithCheck> {
       ],
     );
   }
+
+  void _openDialog() {
+
+    Dialog dialog = Dialog(
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)), //this right here
+      child: SuccessScreen(),
+    );
+    showDialog(context: context, builder: (BuildContext context) => dialog);}
 }

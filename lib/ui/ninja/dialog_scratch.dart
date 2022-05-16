@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:tokenapp/ui/ninja/CongratulationsScreen.dart';
 
 class DialogScratchPage extends StatefulWidget {
   const DialogScratchPage({Key? key}) : super(key: key);
@@ -9,6 +10,15 @@ class DialogScratchPage extends StatefulWidget {
 }
 
 class _HomePageState extends State<DialogScratchPage> {
+
+  @override
+  void initState() {
+      Future.delayed(Duration(seconds: 2), () {
+        _openDialog();
+      });
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
    return Container(
@@ -52,4 +62,13 @@ class _HomePageState extends State<DialogScratchPage> {
      ),
    );
   }
+
+  void _openDialog() {
+
+    Dialog dialog = Dialog(
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)), //this right here
+      child: CongratulationPage(),
+    );
+    showDialog(context: context, builder: (BuildContext context) => dialog);}
+
 }

@@ -13,20 +13,19 @@ class SuccessScreen extends StatefulWidget {
 class _SuccessScreenState extends State<SuccessScreen> {
   @override
   Widget build(BuildContext context) {
-    return Dialog(
-      child: Container(
-        height: MediaQuery.of(context).size.height * 0.60,
-        width: MediaQuery.of(context).size.width * 0.50,
+    return Container(
+        width: 300,
+        height: 365,
         decoration: BoxDecoration(
             color: Colors.transparent,
-            borderRadius: BorderRadius.circular(5.0),
+            borderRadius: BorderRadius.circular(12.0),
             border: Border.all(color: Colors.red, width: 1.0)),
         child: Column(
           children: [
             const SizedBox(
               height: 30.0,
             ),
-            SvgPicture.asset("assets/images/ic_congrats.svg"),
+            SvgPicture.asset("images/ic_congrats.svg"),
             const SizedBox(
               height: 10.0,
             ),
@@ -59,9 +58,9 @@ class _SuccessScreenState extends State<SuccessScreen> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Image.asset("assets/images/twitter.png",height: 48.0, width: 48.0,),
-                Image.asset("assets/images/facebook.png",height: 48.0, width: 48.0,),
-                Image.asset("assets/images/pinterest.png",height: 48.0, width: 48.0,),
+                Image.asset("images/twitter.png",height: 48.0, width: 48.0,),
+                Image.asset("images/facebook.png",height: 48.0, width: 48.0,),
+                Image.asset("images/pinterest.png",height: 48.0, width: 48.0,),
               ],
             ),
             const SizedBox(height: 30.0,),
@@ -86,7 +85,6 @@ class _SuccessScreenState extends State<SuccessScreen> {
             )
           ],
         ),
-      ),
-    );
+      );
   }
 }

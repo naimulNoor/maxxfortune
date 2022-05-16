@@ -13,6 +13,8 @@ import 'package:tokenapp/widgets/widget_textstyle.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tokenapp/widgets/widget_topbar.dart';
 
+import '../../ninja/dialog_scratch.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -200,5 +202,6 @@ class _LoginPageViewState extends State<HomePage> {
       )
     );
   }
+
 }
 
