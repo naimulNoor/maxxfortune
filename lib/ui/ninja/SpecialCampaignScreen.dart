@@ -57,7 +57,7 @@ class _SpecialCampaignPageState extends State<SpecialCampaignPage> {
     return Padding(
       padding: const EdgeInsets.fromLTRB(15.0,15.0,15.0,5.0),
       child: Container(
-        height: 140,
+        height: 150,
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20.0),
