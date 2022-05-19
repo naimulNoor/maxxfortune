@@ -23,7 +23,7 @@ class _HomePageState extends State<DialogScratchPage> {
   Widget build(BuildContext context) {
    return Container(
      width: 300,
-     height: 320,
+     height: 340,
      decoration: BoxDecoration(
          color: Colors.white,
          borderRadius: BorderRadius.circular(15.0),

@@ -30,10 +30,10 @@ class _CongratulationPageState extends State<CongratulationPage> {
   Widget build(BuildContext context) {
     return Container(
       width: 300,
-      height: 320,
+      height: 340,
       decoration: BoxDecoration(
           color: Colors.transparent,
-          borderRadius: BorderRadius.circular(5.0),
+          borderRadius: BorderRadius.circular(12.0),
           border: Border.all(color: Colors.red, width: 1.0)),
       child: Stack(
         alignment: Alignment.center,

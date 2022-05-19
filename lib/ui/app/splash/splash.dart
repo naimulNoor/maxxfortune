@@ -98,7 +98,8 @@ class _SplashScreenState extends State<SplashScreen> {
                           child: Text("Create a New Account",style: TextStyle(color: Colors.white),)),
                     ),
                   ),
-                )
+                ),
+                    SizedBox(height: 30.0,)
 
                   ],
                 ),
