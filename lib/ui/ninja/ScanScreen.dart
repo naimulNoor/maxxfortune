@@ -77,7 +77,7 @@ class _ScanPageState extends State<ScanPage> {
       children: [
         Positioned(child: Padding(
           padding: const EdgeInsets.fromLTRB(10.0,20.0,10.0,20.0),
-          child: ClipPath(clipper: CustomClipPath(),child: Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(10.0), color: Colors.white),height: 630,),),
+          child: ClipPath(clipper: CustomClipPath(),child: Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(10.0), color: Colors.white),height: 670,),),
         )),
         Positioned(
             child: Column(

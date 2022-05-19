@@ -83,7 +83,7 @@ class _WalletTabPageState extends State<WalletTabPage> {
                         "My Wallet",
                         style: TextStyle(
                             fontWeight: FontWeight.w700,
-                            fontSize: 22.0,
+                            fontSize: 20.0,
                             color: AppCustomColors.textDarkColor),
                       ),
                       SizedBox(height: 4,),
@@ -91,33 +91,36 @@ class _WalletTabPageState extends State<WalletTabPage> {
                         "High Chances to Win Token",
                         style: TextStyle(
                             fontWeight: FontWeight.w400,
-                            fontSize: 15.0,
+                            fontSize: 13.0,
                             color: AppCustomColors.textLightColor),
                       )
                     ],
                   ),
                 ),
                 Container(
-                  width: MediaQuery.of(context).size.width / 6,
+                  width: MediaQuery.of(context).size.width / 5,
                   height: 24,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(25.0),
                       color: Colors.white),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image.asset("images/icons/lion.png",height: 18,width: 18,),
-                      const SizedBox(
-                        width: 2.0,
-                      ),
-                      const Text(
-                        "1.5K ",
-                        style: TextStyle(
-                            fontSize: 15.0,
-                            fontWeight: FontWeight.bold,
-                            color: AppCustomColors.textCoinColor),
-                      )
-                    ],
+                  child: Padding(
+                    padding: const EdgeInsets.all(3.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset("images/icons/lion.png",height: 16,width: 16,),
+                        const SizedBox(
+                          width: 2.0,
+                        ),
+                        const Text(
+                          "1.5K ",
+                          style: TextStyle(
+                              fontSize: 13.0,
+                              fontWeight: FontWeight.bold,
+                              color: AppCustomColors.textCoinColor),
+                        )
+                      ],
+                    ),
                   ),
                 ),
                 const SizedBox(

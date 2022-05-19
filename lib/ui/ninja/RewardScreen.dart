@@ -14,7 +14,7 @@ class _RewardPageState extends State<RewardPage> {
   Widget build(BuildContext context) {
     return Container(
       width: 300,
-      height: 350,
+      height: 360,
       decoration: BoxDecoration(
           color: Colors.transparent,
           borderRadius: BorderRadius.circular(12.0),

@@ -102,9 +102,9 @@ class _TokenPageState extends State<TokenPage> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: const [
-                      Text("#9958686", style: TextStyle(fontWeight: FontWeight.normal, fontSize: 15.0, color: AppCustomColors.textLightColor),),
+                      Text("#9958686", style: TextStyle(fontWeight: FontWeight.normal, fontSize: 13.0, color: AppCustomColors.textLightColor),),
                       SizedBox(height: 5.0,),
-                      Text("Enjoy 25 % Discount",style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0, color: AppCustomColors.textDarkColor),),
+                      Text("Enjoy 25 % Discount",style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15.0, color: AppCustomColors.textDarkColor),),
                     ],
                   ),
                 ),
