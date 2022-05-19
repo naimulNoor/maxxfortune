@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:tokenapp/ui/ninja/ClaimRewardScreen.dart';
-import 'package:tokenapp/ui/ninja/DailyRewardScreen.dart';
 import 'package:tokenapp/ui/ninja/RewardScreen.dart';
 import '../../Utils/AppCustomColors.dart';
 
@@ -42,12 +40,12 @@ class _NotificationPageState extends State<NotificationPage> {
           padding: const EdgeInsets.only(left: 30.0, right: 30.0),
           child: Row(
             children: [
-              InkWell(child: Icon(Icons.arrow_back_outlined, color: Colors.black,), onTap: () { Navigator.pop(context); },),
+              InkWell(child: Icon(Icons.arrow_back_outlined, color: Colors.black,size: 36,), onTap: () { Navigator.pop(context); },),
               Expanded(child: Text(
                 "Notifications",
                 style: TextStyle(
                     fontWeight: FontWeight.w700,
-                    fontSize: 18.0,
+                    fontSize: 15.0,
                     color: AppCustomColors.textDarkColor),
                 textAlign: TextAlign.center,
               ),)
@@ -82,8 +80,8 @@ class _NotificationPageState extends State<NotificationPage> {
                   child: Row(
                     children: [
                       Container(
-                        height: 48.0,
-                        width: 48.0,
+                        height: 42.0,
+                        width: 42.0,
                         decoration: BoxDecoration(
                             color: AppCustomColors.lightCreamBlue,
                             borderRadius: BorderRadius.circular(50.0)
@@ -101,7 +99,7 @@ class _NotificationPageState extends State<NotificationPage> {
                                   "Daily Reward",
                                   style: TextStyle(
                                       fontWeight: FontWeight.w700,
-                                      fontSize: 18.0,
+                                      fontSize: 13.0,
                                       color: AppCustomColors.textDarkColor),
                                   textAlign: TextAlign.center,
                                 ),
@@ -115,14 +113,14 @@ class _NotificationPageState extends State<NotificationPage> {
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-                                      SvgPicture.asset("assets/images/ic_coin.svg"),
+                                      Image.asset("images/icons/lion.png", height: 16,width: 16,),
                                       const SizedBox(
                                         width: 3.0,
                                       ),
                                       const Text(
                                         "+50",
                                         style: TextStyle(
-                                            fontSize: 15.0,
+                                            fontSize: 10.0,
                                             fontWeight: FontWeight.bold,
                                             color: AppCustomColors.textCoinColor),
                                       )
@@ -135,7 +133,7 @@ class _NotificationPageState extends State<NotificationPage> {
                               "Collaboratively harness high profile",
                               style: TextStyle(
                                   fontWeight: FontWeight.w500,
-                                  fontSize: 15.0,
+                                  fontSize: 10.0,
                                   color: AppCustomColors.textLightColor),
                               textAlign: TextAlign.start,
                             )
@@ -150,7 +148,7 @@ class _NotificationPageState extends State<NotificationPage> {
                   "2 days ago",
                   style: TextStyle(
                       fontWeight: FontWeight.w500,
-                      fontSize: 13.0,
+                      fontSize: 8.0,
                       color: Colors.black26),
                 ),
               ],

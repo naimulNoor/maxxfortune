@@ -30,7 +30,7 @@ class _RewardPageState extends State<RewardPage> {
             textAlign: TextAlign.start,
             style: TextStyle(
                 fontWeight: FontWeight.bold,
-                fontSize: 20.0,
+                fontSize: 15.0,
                 color: Colors.black),
           ),
           const SizedBox(height: 5.0,),
@@ -40,31 +40,36 @@ class _RewardPageState extends State<RewardPage> {
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(25.0),
                 color: AppCustomColors.pageStartColor),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SvgPicture.asset("assets/images/ic_coin.svg"),
-                const SizedBox(
-                  width: 5.0,
-                ),
-                const Text(
-                  "+50",
-                  style: TextStyle(
-                      fontSize: 18.0,
-                      fontWeight: FontWeight.bold,
-                      color: AppCustomColors.textCoinColor),
-                )
-              ],
+            child: Padding(
+              padding: const EdgeInsets.all(3.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Image.asset("images/icons/lion.png"),
+                  const SizedBox(
+                    width: 5.0,
+                  ),
+                  const Text(
+                    "+50",
+                    style: TextStyle(
+                        fontSize: 13.0,
+                        fontWeight: FontWeight.bold,
+                        color: AppCustomColors.textCoinColor),
+                  )
+                ],
+              ),
             ),
           ),
           const SizedBox(height: 10,),
-          const Text("Uniquely Communicate Real-Time", style: TextStyle(fontSize: 13.0, fontWeight: FontWeight.normal, color: Colors.black),),
-          const Text("\"Outside the Box\" Thinking", style: TextStyle(fontSize: 13.0, fontWeight: FontWeight.normal, color: Colors.black),),
+          const Text("Uniquely Communicate Real-Time", style: TextStyle(fontSize: 12.0, fontWeight: FontWeight.normal, color: Colors.black),),
+          const Text("\"Outside the Box\" Thinking", style: TextStyle(fontSize: 12.0, fontWeight: FontWeight.normal, color: Colors.black),),
           const SizedBox(height: 25.0,),
           Padding(
             padding: const EdgeInsets.only(bottom: 15.0),
             child: Container(
               width: MediaQuery.of(context).size.width / 1.5,
+              height: 43,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(25.0),
                 gradient: const LinearGradient(
@@ -76,8 +81,7 @@ class _RewardPageState extends State<RewardPage> {
                   ],
                 ),
               ),
-              child: const Padding(padding: EdgeInsets.all(15.0), child: Text("Claim Reward", style: TextStyle(fontWeight: FontWeight.normal, fontSize: 15.0, color: Colors.white), textAlign: TextAlign.center,)
-              ),
+              child: Center(child: Text("Claim Reward", style: TextStyle(fontWeight: FontWeight.normal, fontSize: 15.0, color: Colors.white), textAlign: TextAlign.center,)),
             ),
           )
         ],
