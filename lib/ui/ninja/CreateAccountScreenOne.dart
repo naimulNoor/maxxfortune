@@ -1,6 +1,7 @@
 import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:tokenapp/ui/app/auth/registration/registration_page_two.dart';
+import 'package:tokenapp/widgets/widget_button.dart';
 import '../../Utils/AppCustomColors.dart';
 
 class CreateAccountOneScreenPage extends StatefulWidget {
@@ -40,8 +41,8 @@ class _CreateAccountOneScreenPageState
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Icon(Icons.arrow_back, color: Colors.black,size: 36,),
-          const SizedBox(height: 10.0,),
+          InkWell(child: Icon(Icons.arrow_back, color: Colors.black,size: 36,), onTap: () {Navigator.pop(context);},),
+          const SizedBox(height: 20.0,),
           RichText(text: const TextSpan(
               children: [
                 TextSpan(text: "STEP ", style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15.0, color: Colors.black38)),
@@ -52,26 +53,30 @@ class _CreateAccountOneScreenPageState
           const SizedBox(height: 15.0,),
           const Text("Create Account", style: TextStyle(fontWeight: FontWeight.w500, fontSize: 25.0, color: AppCustomColors.textDarkColor),),
           const SizedBox(height: 15.0,),
-          const Text("Collaboratively harness high-payoff methodologies via out-of-the-box vortals", style: TextStyle(fontWeight: FontWeight.w500, fontSize: 13.0, color: Colors.black38),),
+          const Text("Collaboratively harness high-payoff methodologies via out-of-the-box vortals", style: TextStyle(fontWeight: FontWeight.w500, fontSize: 12.0, color: Colors.black38),),
           const SizedBox(height: 15.0,),
           TextField(
             decoration: InputDecoration(
               hintText: "Enter Your Name",
+              hintStyle: TextStyle(fontWeight: FontWeight.w500, fontSize: 12.0,color: Colors.black38),
               fillColor: Colors.white,
               filled: true,
               focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.dividerColor)),
               enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.dividerColor)),
             ),
+            style: TextStyle(fontWeight: FontWeight.w500,fontSize: 12.0),
           ),
           const SizedBox(height: 10.0,),
           TextField(
             decoration: InputDecoration(
               hintText: "Enter Your Email",
+              hintStyle: TextStyle(fontWeight: FontWeight.w500,fontSize: 12.0,color: Colors.black38),
               fillColor: Colors.white,
               filled: true,
               focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.dividerColor)),
               enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.dividerColor)),
             ),
+            style: TextStyle(fontWeight: FontWeight.w500,fontSize: 12.0),
           ),
           const SizedBox(height: 10.0,),
           Container(
@@ -93,8 +98,8 @@ class _CreateAccountOneScreenPageState
                   child: TextField(
                     decoration: InputDecoration(
                       border: InputBorder.none,
-                      hintText: "CONFIRM PASSWORD",
-                      hintStyle: TextStyle(letterSpacing: 1, fontSize: 13.0, fontWeight: FontWeight.w500, color: Colors.black38),
+                      hintText: "Phone",
+                      hintStyle: TextStyle(letterSpacing: 1, fontSize: 12.0, fontWeight: FontWeight.w500, color: Colors.black38),
                     ),
                   ),
                 )
@@ -105,31 +110,34 @@ class _CreateAccountOneScreenPageState
           TextField(
             decoration: InputDecoration(
                 hintText: "PASSWORD",
-                hintStyle: const TextStyle(letterSpacing: 1, fontSize: 13.0, fontWeight: FontWeight.w500, color: Colors.black38),
+                hintStyle: const TextStyle(letterSpacing: 1, fontSize: 12.0, fontWeight: FontWeight.w500, color: Colors.black38),
                 fillColor: Colors.white,
                 filled: true,
                 focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.dividerColor)),
                 enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.dividerColor)),
                 suffixIcon: const Icon(Icons.remove_red_eye_outlined, color: Colors.black38,)
             ),
+            style: TextStyle(fontWeight: FontWeight.w500,fontSize: 12.0),
           ),
           const SizedBox(height: 10.0,),
           TextField(
             decoration: InputDecoration(
                 hintText: "CONFIRM PASSWORD",
-                hintStyle: const TextStyle(letterSpacing: 1, fontSize: 13.0, fontWeight: FontWeight.w500, color: Colors.black38),
+                hintStyle: const TextStyle(letterSpacing: 1, fontSize: 12.0, fontWeight: FontWeight.w500, color: Colors.black38),
                 fillColor: Colors.white,
                 filled: true,
                 focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.dividerColor)),
                 enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.dividerColor)),
                 suffixIcon: const Icon(Icons.remove_red_eye_outlined, color: Colors.black38,)
             ),
+            style: TextStyle(fontWeight: FontWeight.w500,fontSize: 12.0),
           ),
           const SizedBox(height: 40.0,),
           Padding(
             padding: const EdgeInsets.only(bottom: 15.0),
             child: Container(
               width: MediaQuery.of(context).size.width,
+              height: 48.0,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(25.0),
                 gradient: const LinearGradient(
@@ -142,8 +150,7 @@ class _CreateAccountOneScreenPageState
                 ),
               ),
               child: InkWell(
-                child: const Padding(padding: EdgeInsets.all(15.0), child: Text("Next", style: TextStyle(fontWeight: FontWeight.normal, fontSize: 15.0, color: Colors.white), textAlign: TextAlign.center,),
-                ),
+                child: Center(child: Text("Next", style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15.0, color: Colors.white), textAlign: TextAlign.center,)),
                 onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => (RegistrationTwoPage())));},
               ),
             ),

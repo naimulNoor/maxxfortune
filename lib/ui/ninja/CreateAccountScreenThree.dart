@@ -37,8 +37,8 @@ class _CreateAccountThreeScreenPageState extends State<CreateAccountThreeScreenP
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Icon(Icons.arrow_back, color: Colors.black,size: 36,),
-          const SizedBox(height: 10.0,),
+          InkWell(child: Icon(Icons.arrow_back, color: Colors.black,size: 36,), onTap: () {Navigator.pop(context);},),
+          const SizedBox(height: 20.0,),
           RichText(text: const TextSpan(
               children: [
                 TextSpan(text: "STEP ", style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15.0, color: Colors.black38)),
@@ -121,34 +121,37 @@ class _CreateAccountThreeScreenPageState extends State<CreateAccountThreeScreenP
           TextField(
             decoration: InputDecoration(
               labelText: "ADDRESS LINE 1",
-              labelStyle: const TextStyle(letterSpacing: 1, fontSize: 13.0, fontWeight: FontWeight.w500, color: Colors.black38),
+              labelStyle: const TextStyle(letterSpacing: 1, fontSize: 12.0, fontWeight: FontWeight.w500, color: Colors.black38),
               fillColor: Colors.white,
               filled: true,
               focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.dividerColor)),
               enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.dividerColor)),
             ),
+            style: TextStyle(fontWeight: FontWeight.w500,fontSize: 12.0),
           ),
           const SizedBox(height: 10.0,),
           TextField(
             decoration: InputDecoration(
               labelText: "ADDRESS LINE 2",
-              labelStyle: const TextStyle(letterSpacing: 1, fontSize: 13.0, fontWeight: FontWeight.w500, color: Colors.black38),
+              labelStyle: const TextStyle(letterSpacing: 1, fontSize: 12.0, fontWeight: FontWeight.w500, color: Colors.black38),
               fillColor: Colors.white,
               filled: true,
               focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.dividerColor)),
               enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.dividerColor)),
             ),
+            style: TextStyle(fontWeight: FontWeight.w500,fontSize: 12.0),
           ),
           const SizedBox(height: 10.0,),
           TextField(
             decoration: InputDecoration(
               labelText: "ZIP CODE",
-              labelStyle: const TextStyle(letterSpacing: 1, fontSize: 13.0, fontWeight: FontWeight.w500, color: Colors.black38),
+              labelStyle: const TextStyle(letterSpacing: 1, fontSize: 12.0, fontWeight: FontWeight.w500, color: Colors.black38),
               fillColor: Colors.white,
               filled: true,
               focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.dividerColor)),
               enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.dividerColor)),
             ),
+            style: TextStyle(fontWeight: FontWeight.w500,fontSize: 12.0),
           ),
           const SizedBox(height: 10.0,),
           Row(
@@ -159,12 +162,13 @@ class _CreateAccountThreeScreenPageState extends State<CreateAccountThreeScreenP
                 child: TextField(
                   decoration: InputDecoration(
                     labelText: "COUNTRY",
-                    labelStyle: const TextStyle(letterSpacing: 1, fontSize: 13.0, fontWeight: FontWeight.w500, color: Colors.black38),
+                    labelStyle: const TextStyle(letterSpacing: 1, fontSize: 12.0, fontWeight: FontWeight.w500, color: Colors.black38),
                     fillColor: Colors.white,
                     filled: true,
                     focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.dividerColor)),
                     enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.dividerColor)),
                   ),
+                  style: TextStyle(fontWeight: FontWeight.w500,fontSize: 12.0),
                 ),
               ),
               const SizedBox(width: 10.0,),
@@ -173,12 +177,13 @@ class _CreateAccountThreeScreenPageState extends State<CreateAccountThreeScreenP
                 child: TextField(
                   decoration: InputDecoration(
                     labelText: "POSTAL CODE",
-                    labelStyle: const TextStyle(letterSpacing: 1, fontSize: 13.0, fontWeight: FontWeight.w500, color: Colors.black38),
+                    labelStyle: const TextStyle(letterSpacing: 1, fontSize: 12.0, fontWeight: FontWeight.w500, color: Colors.black38),
                     fillColor: Colors.white,
                     filled: true,
                     focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.dividerColor)),
                     enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.dividerColor)),
                   ),
+                  style: TextStyle(fontWeight: FontWeight.w500,fontSize: 12.0),
                 ),
               ),
             ],
@@ -188,6 +193,7 @@ class _CreateAccountThreeScreenPageState extends State<CreateAccountThreeScreenP
             padding: const EdgeInsets.only(bottom: 15.0),
             child: Container(
               width: MediaQuery.of(context).size.width,
+              height: 48.0,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(25.0),
                 gradient: const LinearGradient(
@@ -199,8 +205,7 @@ class _CreateAccountThreeScreenPageState extends State<CreateAccountThreeScreenP
                   ],
                 ),
               ),
-              child: const Padding(padding: EdgeInsets.all(15.0), child: Text("Next", style: TextStyle(fontWeight: FontWeight.normal, fontSize: 15.0, color: Colors.white), textAlign: TextAlign.center,)
-              ),
+              child: Center(child: Text("Next", style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15.0, color: Colors.white), textAlign: TextAlign.center,)),
             ),
           ),
         ],

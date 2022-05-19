@@ -95,7 +95,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
                       ),
                       child: Center(
-                          child: Text("Create a New Account",style: TextStyle(color: Colors.white),)),
+                          child: Text("Create a New Account",style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 15.0),)),
                     ),
                   ),
                 ),

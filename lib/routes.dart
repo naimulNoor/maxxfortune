@@ -6,7 +6,7 @@ import 'package:tokenapp/ui/ninja/ClaimScreenOne.dart';
 import 'package:tokenapp/ui/ninja/ClaimScreenTwo.dart';
 import 'package:tokenapp/ui/ninja/CongratulationsScreen.dart';
 import 'package:tokenapp/ui/ninja/CreateAccountScreenOne.dart';
-import 'package:tokenapp/ui/ninja/CreateAccountScreenTwo.dart';
+import 'package:tokenapp/ui/ninja/CreateAccountScreenThree.dart';
 
 import 'package:tokenapp/ui/ninja/DailyRewardScreen.dart';
 import 'package:tokenapp/ui/ninja/DiscountScreen.dart';

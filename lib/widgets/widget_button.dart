@@ -36,7 +36,7 @@ class _WidgetButtonState extends State<WidgetButton> {
 
           ),
           child: Center(
-              child: Text(widget.title,style: TextStyle(color: Colors.white),)),
+              child: Text(widget.title,style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 15.0),)),
         ),
       ),
     );
