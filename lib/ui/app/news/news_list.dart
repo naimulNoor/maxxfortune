@@ -37,20 +37,15 @@ class _FaqViewState extends State<NewsListPage> {
       ),
       child: Scaffold(
         backgroundColor: Colors.white,
-
         body: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            TitleWidget(),
             Expanded(
-                flex: 0,
-                child: TitleWidget()),
-            Expanded(
-              flex: 1,
-              child:  Container(
+              child: Container(
                   padding: EdgeInsets.symmetric(horizontal: 10.0),
                   margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
-
                   child: ListView.builder(
                     itemCount: 6,
                     scrollDirection: Axis.vertical,
@@ -122,7 +117,7 @@ class TitleWidget extends StatelessWidget {
     return Stack(
         children: [
           Container(
-            height: 377.0,
+            height: 380.0,
             width: double.maxFinite,
             decoration: const BoxDecoration(
               image: DecorationImage(
@@ -132,7 +127,7 @@ class TitleWidget extends StatelessWidget {
             ),
           ),
           Container(
-              height: 350,
+              height: 380,
               width: MediaQuery.of(context).size.width,
               margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
               child: Column(
@@ -155,9 +150,7 @@ class TitleWidget extends StatelessWidget {
                         itemBuilder: (context, i) {
                           return Container(
                             margin: EdgeInsets.fromLTRB(0, 0, 20, 0),
-                            height: 245,
-                            width: 241,
-
+                            width: 245,
                             decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(20.0)
@@ -181,14 +174,13 @@ class TitleWidget extends StatelessWidget {
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
-                                      SizedBox(height: 15.0,),
+                                      SizedBox(height: 10.0,),
                                       Text("24 May, 2020",style: TextStyle(color: Color(0xff95A0AE),fontSize: 13.0,letterSpacing: 1),),
-                                      SizedBox(height: 15.0,),
+                                      SizedBox(height: 10.0,),
                                       Text("Fun Fall Craft Ideas for Mask New Life Toddlers.",style: TextStyle(color: Color(0xff11243D),fontSize: 15.0,fontWeight: FontWeight.w500),)
                                     ],
                                   ),
                                 ),
-
                               ],
                             ),
                           );

@@ -221,8 +221,8 @@ class TitleWidget extends StatelessWidget {
     return Stack(
         children: [
           Container(
-            height: 144.0,
-            width: double.maxFinite,
+            height: 145.0,
+            width: double.infinity,
             decoration: const BoxDecoration(
               image: DecorationImage(
                 fit: BoxFit.cover,
@@ -248,37 +248,36 @@ class TitleWidget extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
-                                Text("Naimul Hassan Noor",style:AppFontStyle.style_otp_field ,),
+                                Text("Naimul Hassan Noor",style:TextStyle(fontWeight: FontWeight.w500,fontSize: 18.0, color: Colors.black) ,),
                                 SizedBox(height: 5,),
-                                Container(
-                                  width: 109,
-                                  child: InkWell(
-                                    onTap:(){
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) => (ProfilePage ()),
-                                        ),
-                                      );
-                                    },
-                                    child: Container(
-                                      height: 23,
-                                      decoration: BoxDecoration(
-                                        gradient: LinearGradient(
-                                            colors: [color_lightorange,color_red],
-                                            begin: const FractionalOffset(0.0, 0.0),
-                                            end: const FractionalOffset(0.8, 0.0),
-                                            stops: [0.0, 5.0],
-                                            tileMode: TileMode.clamp
-                                        ),
-                                        borderRadius: BorderRadius.circular(50.0),
-
+                                InkWell(
+                                  onTap:(){
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => (ProfilePage ()),
                                       ),
-                                      child: Center(
-                                          child: Text("VIEW PROFILE",style: TextStyle(color: Colors.white,fontSize: 12.0),)),
+                                    );
+                                  },
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      gradient: LinearGradient(
+                                          colors: [color_lightorange,color_red],
+                                          begin: const FractionalOffset(0.0, 0.0),
+                                          end: const FractionalOffset(0.8, 0.0),
+                                          stops: [0.0, 5.0],
+                                          tileMode: TileMode.clamp
+                                      ),
+                                      borderRadius: BorderRadius.circular(50.0),
+
                                     ),
+                                    child: Center(
+                                        child: Padding(
+                                          padding: const EdgeInsets.all(8.0),
+                                          child: Text("VIEW PROFILE",style: TextStyle(color: Colors.white,fontSize: 12.0, fontWeight: FontWeight.w500),),
+                                        )),
                                   ),
-                  ),
+                                ),
                               ],
                             )
                           ],

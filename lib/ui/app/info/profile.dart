@@ -42,17 +42,13 @@ class _FaqViewState extends State<ProfilePage> {
       ),
       child: Scaffold(
         backgroundColor: Colors.white,
-
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Expanded(
-                flex: 0,
-                child: TitleWidget()),
-            Expanded(
-              flex: 1,
-              child:  Container(
+        body: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              TitleWidget(),
+              Container(
                   padding: EdgeInsets.symmetric(horizontal: 40.0),
                   margin: EdgeInsets.fromLTRB(0, 50, 0, 0),
 
@@ -101,13 +97,11 @@ class _FaqViewState extends State<ProfilePage> {
 
                         ],
                       ),
-
-
                     ],
                   )
-              ),
-            )
-          ],
+              )
+            ],
+          ),
         ),
       ),
     );

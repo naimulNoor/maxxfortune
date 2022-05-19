@@ -39,16 +39,13 @@ class _FaqViewState extends State<NewsDetailsPage> {
       child: Scaffold(
         backgroundColor: Colors.white,
 
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Expanded(
-                flex: 0,
-                child: TitleWidget()),
-            Expanded(
-              flex: 1,
-              child:  Container(
+        body: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              TitleWidget(),
+              Container(
                   padding: EdgeInsets.symmetric(horizontal: 10.0),
                   margin: EdgeInsets.fromLTRB(20, 80, 0, 0),
 
@@ -76,9 +73,9 @@ class _FaqViewState extends State<NewsDetailsPage> {
                       ],
                     ),
                   )
-              ),
-            )
-          ],
+              )
+            ],
+          ),
         ),
       ),
     );
