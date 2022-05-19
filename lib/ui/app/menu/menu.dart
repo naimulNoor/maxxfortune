@@ -67,7 +67,6 @@ class _FaqViewState extends State<WidgetMenu> {
               child:  SingleChildScrollView(
                 child: Container(
                     padding: EdgeInsets.symmetric(horizontal: 20.0),
-                    margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
 
                     child: Column(
                      crossAxisAlignment: CrossAxisAlignment.start,
