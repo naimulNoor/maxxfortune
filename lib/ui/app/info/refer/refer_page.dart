@@ -41,100 +41,94 @@ class _FaqViewState extends State<ReferPage> {
       child: Scaffold(
         backgroundColor: Colors.white,
 
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Expanded(
-                flex: 0,
-                child: TitleWidget()),
-            Expanded(
-                flex: 1,
-                child:  SingleChildScrollView(
-                  child: Container(
-                        padding: EdgeInsets.symmetric(horizontal: 40.0),
-                        margin: EdgeInsets.fromLTRB(0, 50, 0, 0),
+        body: SingleChildScrollView (
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              TitleWidget(),
+              Container(
+                    padding: EdgeInsets.symmetric(horizontal: 40.0),
+                    margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
 
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+
+                        Column(
                           children: [
+                            Text("REFERRAL CODE",style: TextStyle(
+                              fontSize: 10.0,
+                              color: Colors.black
 
-                            Column(
-                              children: [
-                                Text("REFERRAL CODE",style: TextStyle(
-                                  fontSize: 10.0,
-                                  color: Colors.black
+                            ),),
+                            SizedBox(height: 15,),
+                            Text("8Q9335",style: TextStyle(
+                                color: Colors.red,
+                                fontSize: 30.0,
+                                fontWeight: FontWeight.bold
+                            ),),
+                            SizedBox(height: 30,),
+                            Text("REFERRAL LINK",style: TextStyle(
+                                fontSize: 10.0,
+                                color: Colors.black
 
-                                ),),
-                                SizedBox(height: 15,),
-                                Text("8Q9335",style: TextStyle(
-                                    color: Colors.red,
-                                    fontSize: 34.0,
-                                    fontWeight: FontWeight.bold
-                                ),),
-                                SizedBox(height: 50,),
-                                Text("REFERRAL LINK",style: TextStyle(
-                                    fontSize: 10.0,
-                                    color: Colors.black
+                            ),),
+                            SizedBox(height: 12,),
+                            Text("http://q.tokn.sg/8Q9335",style: TextStyle(
+                                fontSize: 18.0,
+                                color: Colors.black
 
-                                ),),
-                                SizedBox(height: 12,),
-                                Text("http://q.tokn.sg/8Q9335",style: TextStyle(
-                                    fontSize: 20.0,
-                                    color: Colors.black
-
-                                ),),
-                                SizedBox(height: 12,),
-                                Container(
-                                  height: 32,
-                                  width: 88,
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(50.0),
-                                      border: Border.all(color: Colors.grey)
-                                  ),
-                                  child: Center(child: Text("Copy Link",style: TextStyle(
-                                      fontSize: 12.0
-                                  ),)),
-                                ),
-                              ],
-                            ),
+                            ),),
+                            SizedBox(height: 15,),
                             Container(
-                              height: 60,
-                              width: 400,
+                              height: 32,
+                              width: 88,
                               decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                      image:AssetImage("images/refer_price_bg.png",)
-                                  )
+                                  borderRadius: BorderRadius.circular(50.0),
+                                  border: Border.all(color: Colors.grey)
                               ),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text("Wow! You made it",style: TextStyle(color: Colors.white,fontSize: 12.0),),
-                                  SizedBox(height: 2,),
-                                  Container(
-                                      width: 180,
-                                      child: Text.rich(
-                                        TextSpan(
-                                          children: [
-                                            TextSpan(text: 'You have won ',style: TextStyle(fontSize: 10,color: Colors.white,)),
-                                            TextSpan(text: '5 days free trail', style: TextStyle(color:Color(0xffFF8800),fontSize: 10,fontWeight: FontWeight.bold),),
-                                            TextSpan(text: ' of the daily diet plan. Enjoy!',style:TextStyle(fontSize: 10,color: Colors.white,), ),
-                                          ],
-                                        ),
-                                        textAlign: TextAlign.center,
-                                      ),)
-
-                                ],
-                              ),
-                            )
-                            
+                              child: Center(child: Text("Copy Link",style: TextStyle(
+                                  fontSize: 12.0
+                              ),)),
+                            ),
                           ],
+                        ),
+                        SizedBox(height: 15.0,),
+                        Container(
+                          height: 90,
+                          width: 400,
+                          decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image:AssetImage("images/refer_price_bg.png",),
+                              )
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text("Wow! You made it",style: TextStyle(color: Colors.white,fontSize: 10.0),),
+                              SizedBox(height: 2,),
+                              Container(
+                                  width: 180,
+                                  child: Text.rich(
+                                    TextSpan(
+                                      children: [
+                                        TextSpan(text: 'You have won ',style: TextStyle(fontSize: 8,color: Colors.white,)),
+                                        TextSpan(text: '5 days free trail', style: TextStyle(color:Color(0xffFF8800),fontSize: 8,fontWeight: FontWeight.bold),),
+                                        TextSpan(text: ' of the daily diet plan. Enjoy!',style:TextStyle(fontSize: 8,color: Colors.white,), ),
+                                      ],
+                                    ),
+                                    textAlign: TextAlign.center,
+                                  ),)
+                            ],
+                          ),
                         )
-                    ),
-                ),
+                      ],
+                    )
                 )
-          ],
+            ],
+          ),
         ),
       ),
     );
@@ -189,24 +183,21 @@ class TitleWidget extends StatelessWidget {
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 color: Colors.black,
-                                  fontSize: 20.0,
+                                  fontSize: 18.0,
                                   height: 1.5,
                                 fontWeight: FontWeight.bold
                               ),
                             ),
                           ),
                           SizedBox(height: 10.0,),
-                          Container(
-                            width: 300,
-                            child: Text(
-                              "Collaboratively harness high-payoff methodologies via out-of-the-box vortals",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
+                          Text(
+                            "Collaboratively harness high-payoff methodologies via out-of-the-box vortals",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
                                 fontSize: 13.0,
                                 color: Colors.grey
-                              ),
                             ),
-                          )
+                          ),
                         ],
                       ),
                     ),

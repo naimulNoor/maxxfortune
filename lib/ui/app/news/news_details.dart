@@ -148,14 +148,6 @@ class TitleWidget extends StatelessWidget {
 }
 
 
-
-
-
-
-
-
-
-
 class FaqItemWidget extends StatefulWidget {
   CotactUsModel model;
   FaqItemWidget(this.model);
