@@ -122,12 +122,12 @@ class _VipPageState extends State<VipPage> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text("Monthly Membership", style: TextStyle(fontWeight: FontWeight.w400, fontSize: 22.0, color: Colors.white),),
+                    const Text("Monthly Membership", style: TextStyle(fontWeight: FontWeight.w400, fontSize: 20.0, color: Colors.white),),
                     SvgPicture.asset("images/ic_qr.svg")
                   ],
                 ),
               ),
-              const SizedBox(height: 20.0,),
+              const SizedBox(height: 15.0,),
               Padding(
                 padding: const EdgeInsets.all(15.0),
                 child: Row(
@@ -136,15 +136,15 @@ class _VipPageState extends State<VipPage> {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: const [
-                        Text("Card Number", style: TextStyle(fontWeight: FontWeight.w400, fontSize: 18.0, color: Colors.white),),
-                        Text("00033430003", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0, color: Colors.white),),
+                        Text("Card Number", style: TextStyle(fontWeight: FontWeight.w400, fontSize: 15.0, color: Colors.white),),
+                        Text("00033430003", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15.0, color: Colors.white),),
                       ],
                     ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: const [
-                        Text("Issuer", style: TextStyle(fontWeight: FontWeight.w400, fontSize: 18.0, color: Colors.white),),
-                        Text("MTB Organization", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0, color: Colors.white),),
+                        Text("Issuer", style: TextStyle(fontWeight: FontWeight.w400, fontSize: 15.0, color: Colors.white),),
+                        Text("MTB Organization", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15.0, color: Colors.white),),
                       ],
                     ),
                   ],

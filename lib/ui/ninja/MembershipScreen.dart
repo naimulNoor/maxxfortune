@@ -28,7 +28,7 @@ class _MembershipPageState extends State<MembershipPage> {
                 "Monthly Membership",
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    fontSize: 22.0,
+                    fontSize: 18.0,
                     color: Colors.black),
               ),
               Padding(
@@ -51,14 +51,14 @@ class _MembershipPageState extends State<MembershipPage> {
                                 "Card Number",
                                 style: TextStyle(
                                     fontWeight: FontWeight.normal,
-                                    fontSize: 15.0,
+                                    fontSize: 13.0,
                                     color: AppCustomColors.textLightColor),
                               ),
                               Text(
                                 "00033430003",
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
-                                    fontSize: 15.0,
+                                    fontSize: 13.0,
                                     color: AppCustomColors.textDarkColor),
                               ),
                             ],
@@ -73,14 +73,14 @@ class _MembershipPageState extends State<MembershipPage> {
                                 "Issuer",
                                 style: TextStyle(
                                     fontWeight: FontWeight.normal,
-                                    fontSize: 15.0,
+                                    fontSize: 13.0,
                                     color: AppCustomColors.textLightColor),
                               ),
                               Text(
                                 "MTB Organization",
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
-                                    fontSize: 15.0,
+                                    fontSize: 13.0,
                                     color: AppCustomColors.textDarkColor),
                               ),
                             ],
@@ -89,7 +89,7 @@ class _MembershipPageState extends State<MembershipPage> {
                       ]),
                     ]),
               ),
-              const SizedBox(height: 40.0,),
+              const SizedBox(height: 30.0,),
               Image.asset("images/barcode.png"),
               const SizedBox(height: 20.0,),
             ],

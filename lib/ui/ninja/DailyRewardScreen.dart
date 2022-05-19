@@ -45,28 +45,31 @@ class _DailyRewardPageState extends State<DailyRewardPage> {
                 Expanded(child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text("Daily Reward", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0, color: AppCustomColors.textDarkColor),),
+                    const Text("Daily Reward", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.0, color: AppCustomColors.textDarkColor),),
                     const SizedBox(height: 5.0,),
                     Container(
                       width: MediaQuery.of(context).size.width / 5,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(25.0),
                           color: AppCustomColors.pageStartColor),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.asset("images/icons/lion.png",height: 18,width: 18,),
-                          const SizedBox(
-                            width: 5.0,
-                          ),
-                          const Text(
-                            "+50",
-                            style: TextStyle(
-                                fontSize: 18.0,
-                                fontWeight: FontWeight.bold,
-                                color: AppCustomColors.textCoinColor),
-                          )
-                        ],
+                      child: Padding(
+                        padding: const EdgeInsets.all(5.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset("images/icons/lion.png",height: 14,width: 14,),
+                            const SizedBox(
+                              width: 5.0,
+                            ),
+                            const Text(
+                              "+50",
+                              style: TextStyle(
+                                  fontSize: 13.0,
+                                  fontWeight: FontWeight.bold,
+                                  color: AppCustomColors.textCoinColor),
+                            )
+                          ],
+                        ),
                       ),
                     )
                   ],
@@ -86,7 +89,7 @@ class _DailyRewardPageState extends State<DailyRewardPage> {
                   child: InkWell(
                     child: const Padding(
                       padding: EdgeInsets.fromLTRB(8.0,5.0,8.0,5.0),
-                      child: Text("Claim", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15.0, color: Colors.white,letterSpacing: 1),),
+                      child: Text("Claim", style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15.0, color: Colors.white,letterSpacing: 1),),
                     ),
                     onTap: () {
                       showDialog(context: context, builder: (context) { return _showDialog();});
