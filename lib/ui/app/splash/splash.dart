@@ -43,18 +43,18 @@ class _SplashScreenState extends State<SplashScreen> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    SizedBox(height: 100,),
-                    Container(child: Image.asset("images/icons/lion.png")),
+                    SizedBox(height: 50,),
+                    Container(child: Image.asset("images/icons/lion.png", height: 64, width: 64,)),
                     SizedBox(height: 10,),
                     Text.rich(
                       TextSpan(
                         children: [
                           TextSpan(
                             text: 'Scratch ',
-                            style: TextStyle(fontWeight: FontWeight.bold,fontSize:50 ,color: Colors.white),),
+                            style: TextStyle(fontWeight: FontWeight.bold,fontSize:36 ,color: Colors.white),),
                           TextSpan(
                             text: 'Away',
-                            style: TextStyle(fontSize:50 ,color: Colors.white),),
+                            style: TextStyle(fontSize:36 ,color: Colors.white),),
                         ],
                       ),
                     ),
@@ -64,15 +64,15 @@ class _SplashScreenState extends State<SplashScreen> {
                         children: [
                           TextSpan(
                             text: '& Get ',
-                            style: TextStyle(fontSize:50 ,color: Colors.white),),
+                            style: TextStyle(fontSize:36 ,color: Colors.white),),
                           TextSpan(
                             text: 'Rewards ',
-                            style: TextStyle(fontWeight: FontWeight.bold,fontSize:50 ,color: Colors.white),),
+                            style: TextStyle(fontWeight: FontWeight.bold,fontSize:36 ,color: Colors.white),),
 
                         ],
                       ),
                     ),
-                    Container(child: Image.asset("images/splash_image.png",height: 300,)),
+                    Container(child: Image.asset("images/splash_image.png",height: 250,)),
                     SizedBox(height: 40,),
                     WidgetButton(title: "Login to Account", onTap: (){
 
