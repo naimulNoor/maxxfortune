@@ -27,9 +27,8 @@ class UpdateAddressPage extends StatefulWidget {
 class _FaqViewState extends State<UpdateAddressPage> {
   late TextEditingController emailController;
   late TextEditingController passwordController;
-  late TextEditingController confirmPasswordController;
-  late TextEditingController phonController;
-  late TextEditingController nameController;
+  late TextEditingController countryController;
+  late TextEditingController codeController;
 
   @override
   void initState() {
@@ -40,14 +39,12 @@ class _FaqViewState extends State<UpdateAddressPage> {
     passwordController = TextEditingController();
     passwordController.text="";
 
-    confirmPasswordController = TextEditingController();
-    confirmPasswordController.text="";
+    countryController = TextEditingController();
+    countryController.text="Singapore";
 
-    phonController = TextEditingController();
-    phonController.text="";
+    codeController = TextEditingController();
+    codeController.text="788122";
 
-    nameController = TextEditingController();
-    nameController.text="";
   }
 
   @override
@@ -88,7 +85,7 @@ class _FaqViewState extends State<UpdateAddressPage> {
                             Expanded(
                                 flex:2,
                                 child: WidgetTextFormFieldTwo(
-                                    formController: emailController,
+                                    formController: countryController,
                                     inputType: TextInputType.streetAddress,
                                     hintText: "CURRENT CITY",
                                     hintColor: Colors.black,
@@ -97,7 +94,7 @@ class _FaqViewState extends State<UpdateAddressPage> {
                             Expanded(
                                 flex:2,
                                 child: WidgetTextFormFieldTwo(
-                                    formController: emailController,
+                                    formController: codeController,
                                     inputType: TextInputType.streetAddress,
                                     hintText: "ZIP CODE",
                                     hintColor: Colors.black,

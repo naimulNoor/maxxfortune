@@ -89,9 +89,13 @@ class _CreateAccountOneScreenPageState
             child: Row(
               children: [
                 CountryCodePicker(
-                  initialSelection: 'BD',
+                  enabled: false,
+                  initialSelection: 'SG',
                   showCountryOnly: false,
                   showOnlyCountryWhenClosed: false,
+                  flagDecoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(50.0))
+                  ),
                 ),
                 const VerticalDivider(color: AppCustomColors.dividerColor,),
                 const Expanded(

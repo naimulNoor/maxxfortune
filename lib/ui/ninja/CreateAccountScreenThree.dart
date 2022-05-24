@@ -10,6 +10,20 @@ class CreateAccountThreeScreenPage extends StatefulWidget {
 }
 
 class _CreateAccountThreeScreenPageState extends State<CreateAccountThreeScreenPage> {
+
+  late TextEditingController countryController;
+  late TextEditingController codeController;
+
+  @override
+  void initState() {
+    countryController = TextEditingController();
+    countryController.text="Singapore";
+
+    codeController = TextEditingController();
+    codeController.text="788122";
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -160,6 +174,7 @@ class _CreateAccountThreeScreenPageState extends State<CreateAccountThreeScreenP
               Flexible(
                 flex: 1,
                 child: TextField(
+                  controller: countryController,
                   decoration: InputDecoration(
                     labelText: "COUNTRY",
                     labelStyle: const TextStyle(letterSpacing: 1, fontSize: 12.0, fontWeight: FontWeight.w500, color: Colors.black38),
@@ -175,6 +190,7 @@ class _CreateAccountThreeScreenPageState extends State<CreateAccountThreeScreenP
               Flexible(
                 flex: 1,
                 child: TextField(
+                  controller: codeController,
                   decoration: InputDecoration(
                     labelText: "POSTAL CODE",
                     labelStyle: const TextStyle(letterSpacing: 1, fontSize: 12.0, fontWeight: FontWeight.w500, color: Colors.black38),

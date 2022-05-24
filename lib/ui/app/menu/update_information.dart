@@ -1,3 +1,4 @@
+import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
@@ -18,6 +19,7 @@ import 'package:tokenapp/widgets/widget_textfrom_field.dart';
 import 'package:screenshot/screenshot.dart';
 import 'package:tokenapp/widgets/widget_upload_multiphoto.dart';
 
+import '../../../Utils/AppCustomColors.dart';
 import '../../../constants.dart';
 
 class UpdateInformationPage extends StatefulWidget {
@@ -87,29 +89,72 @@ class _FaqViewState extends State<UpdateInformationPage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       WidgetUploadMultiPhotos(),
-                      WidgetTextFormField(
-                        formController: passwordController,
-                        hintText: "Name",
-                        margin:EdgeInsets.fromLTRB(30, 27, 30, 16),
-                        inputType: TextInputType.text,
-                        hint: GSStrings.contact_us_full_name,
+                      SizedBox(height: 30.0,),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 30.0,right: 30.0),
+                        child: TextField(
+                          decoration: InputDecoration(
+                            hintText: "Name",
+                            hintStyle: TextStyle(fontWeight: FontWeight.w500,fontSize: 12.0,color: Colors.black38),
+                            fillColor: Colors.white,
+                            filled: true,
+                            focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.dividerColor)),
+                            enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.dividerColor)),
+                          ),
+                          style: TextStyle(fontWeight: FontWeight.w500,fontSize: 12.0),
+                        ),
                       ),
-                      WidgetTextFormField(
-                        formController: passwordController,
-                        hintText: "Email",
-                        margin:EdgeInsets.fromLTRB(30, 0, 30, 16),
-                        inputType: TextInputType.text,
-                        hint: GSStrings.contact_us_full_name,
+                      SizedBox(height: 15.0,),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 30.0, right: 30.0),
+                        child: TextField(
+                          decoration: InputDecoration(
+                            hintText: "Email",
+                            hintStyle: TextStyle(fontWeight: FontWeight.w500,fontSize: 12.0,color: Colors.black38),
+                            fillColor: Colors.white,
+                            filled: true,
+                            focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.dividerColor)),
+                            enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.dividerColor)),
+                          ),
+                          style: TextStyle(fontWeight: FontWeight.w500,fontSize: 12.0),
+                        ),
                       ),
-                      WidgetTextFormField(
-                        formController: passwordController,
-                        hintText: "Phone",
-                        margin:EdgeInsets.fromLTRB(30, 0, 30, 16),
-                        inputType: TextInputType.text,
-                        hint: GSStrings.contact_us_full_name,
+                      SizedBox(height: 15.0,),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 30.0, right: 30.0,),
+                        child: Container(
+                          height: 56,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(30.0),
+                              border: Border.all(width: 1.0, color: AppCustomColors.dividerColor),
+                              color: Colors.white
+                          ),
+                          child: Row(
+                            children: [
+                              CountryCodePicker(
+                                enabled: false,
+                                initialSelection: 'SG',
+                                showCountryOnly: false,
+                                showOnlyCountryWhenClosed: false,
+                                flagDecoration: BoxDecoration(
+                                    borderRadius: BorderRadius.all(Radius.circular(50.0))
+                                ),
+                              ),
+                              const VerticalDivider(color: AppCustomColors.dividerColor,),
+                              const Expanded(
+                                child: TextField(
+                                  decoration: InputDecoration(
+                                    border: InputBorder.none,
+                                    hintText: "Phone",
+                                    hintStyle: TextStyle(letterSpacing: 1, fontSize: 12.0, fontWeight: FontWeight.w500, color: Colors.black38),
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
                       ),
-
-
+                      SizedBox(height: 30.0,),
                       WidgetButton(
                         title:"Update Information",
                         margin:EdgeInsets.symmetric(horizontal: 30.0,vertical: 10.0),
