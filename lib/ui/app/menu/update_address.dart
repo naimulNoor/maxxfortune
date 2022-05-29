@@ -1,19 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:tokenapp/app_style.dart';
-import 'package:tokenapp/data/localdata.dart';
-import 'package:tokenapp/data/models/container/FaqModel.dart';
-import 'package:tokenapp/data/models/container/contactus/ContactUsModel.dart';
 import 'package:tokenapp/data/models/contuctus/model_contuct_us.dart';
 import 'package:tokenapp/ui/app/auth/forgetpassword/forgetpass_page.dart';
-import 'package:tokenapp/utils/constants.dart';
 import 'package:tokenapp/widgets/widget_button.dart';
 
 import 'package:tokenapp/widgets/widget_textfrom_field_two.dart';
 
+import '../../../Utils/AppCustomColors.dart';
 
-import '../../../constants.dart';
 
 class UpdateAddressPage extends StatefulWidget {
 
@@ -77,35 +71,92 @@ class _FaqViewState extends State<UpdateAddressPage> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      WidgetTextFormFieldTwo(formController: emailController, inputType: TextInputType.streetAddress, hintText: "STREET ADDRESS",hintColor: Colors.black, margin:EdgeInsets.symmetric(horizontal: 30.0,vertical: 10.0),),
-                      WidgetTextFormFieldTwo(formController: emailController, inputType: TextInputType.text, hintText: "APT/ SUITE (OPTIONAL)",hintColor: Colors.black, margin:EdgeInsets.symmetric(horizontal: 30.0,vertical: 10.0),),
-                      Container(
+                      const SizedBox(height: 15.0,),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(30.0,5.0,30.0,5.0),
+                        child: TextField(
+                          decoration: InputDecoration(
+                            labelText: "ADDRESS LINE 1",
+                            labelStyle: const TextStyle(letterSpacing: 1, fontSize: 12.0, fontWeight: FontWeight.w500, color: Colors.black38),
+                            fillColor: Colors.white,
+                            filled: true,
+                            focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.inputBorderColor)),
+                            enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.inputBorderColor)),
+                          ),
+                          style: TextStyle(fontWeight: FontWeight.w500,fontSize: 15.0),
+                        ),
+                      ),
+                      const SizedBox(height: 10.0,),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(30.0,5.0,30.0,5.0),
+                        child: TextField(
+                          decoration: InputDecoration(
+                            labelText: "ADDRESS LINE 2",
+                            labelStyle: const TextStyle(letterSpacing: 1, fontSize: 12.0, fontWeight: FontWeight.w500, color: Colors.black38),
+                            fillColor: Colors.white,
+                            filled: true,
+                            focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.inputBorderColor)),
+                            enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.inputBorderColor)),
+                          ),
+                          style: TextStyle(fontWeight: FontWeight.w500,fontSize: 15.0),
+                        ),
+                      ),
+                      const SizedBox(height: 10.0,),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(30.0,5.0,30.0,5.0),
+                        child: TextField(
+                          decoration: InputDecoration(
+                            labelText: "ZIP CODE",
+                            labelStyle: const TextStyle(letterSpacing: 1, fontSize: 12.0, fontWeight: FontWeight.w500, color: Colors.black38),
+                            fillColor: Colors.white,
+                            filled: true,
+                            focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.inputBorderColor)),
+                            enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.inputBorderColor)),
+                          ),
+                          style: TextStyle(fontWeight: FontWeight.w500,fontSize: 15.0),
+                        ),
+                      ),
+                      const SizedBox(height: 10.0,),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(30.0,5.0,30.0,5.0),
                         child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
-                            Expanded(
-                                flex:2,
-                                child: WidgetTextFormFieldTwo(
-                                    formController: countryController,
-                                    inputType: TextInputType.streetAddress,
-                                    hintText: "CURRENT CITY",
-                                    hintColor: Colors.black,
-                                    margin:EdgeInsets.fromLTRB(30, 10, 5, 0)
-                                )),
-                            Expanded(
-                                flex:2,
-                                child: WidgetTextFormFieldTwo(
-                                    formController: codeController,
-                                    inputType: TextInputType.streetAddress,
-                                    hintText: "ZIP CODE",
-                                    hintColor: Colors.black,
-                                    margin:EdgeInsets.fromLTRB(5, 10, 30, 0)
-                                )),
+                            Flexible(
+                              flex: 1,
+                              child: TextField(
+                                controller: countryController,
+                                decoration: InputDecoration(
+                                  labelText: "COUNTRY",
+                                  labelStyle: const TextStyle(letterSpacing: 1, fontSize: 13.0, fontWeight: FontWeight.w500, color: Colors.black38),
+                                  fillColor: Colors.white,
+                                  filled: true,
+                                  focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.inputBorderColor)),
+                                  enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.inputBorderColor)),
+                                ),
+                                style: TextStyle(fontWeight: FontWeight.w500,fontSize: 15.0),
+                              ),
+                            ),
+                            const SizedBox(width: 10.0,),
+                            Flexible(
+                              flex: 1,
+                              child: TextField(
+                                controller: codeController,
+                                decoration: InputDecoration(
+                                  labelText: "POSTAL CODE",
+                                  labelStyle: const TextStyle(letterSpacing: 1, fontSize: 13.0, fontWeight: FontWeight.w500, color: Colors.black38),
+                                  fillColor: Colors.white,
+                                  filled: true,
+                                  focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.inputBorderColor)),
+                                  enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.inputBorderColor)),
+                                ),
+                                style: TextStyle(fontWeight: FontWeight.w500,fontSize: 15.0),
+                              ),
+                            ),
                           ],
                         ),
                       ),
-                      SizedBox(height: 10,),
-
-
+                      const SizedBox(height: 40.0,),
                       WidgetButton(
                         title:"Update New Password",
                         margin:EdgeInsets.symmetric(horizontal: 30.0,vertical: 10.0),

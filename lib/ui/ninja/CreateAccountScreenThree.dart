@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../Utils/AppCustomColors.dart';
+import '../../constants.dart';
 
 class CreateAccountThreeScreenPage extends StatefulWidget {
   const CreateAccountThreeScreenPage({Key? key}) : super(key: key);
@@ -51,7 +52,7 @@ class _CreateAccountThreeScreenPageState extends State<CreateAccountThreeScreenP
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          InkWell(child: Icon(Icons.arrow_back, color: Colors.black,size: 36,), onTap: () {Navigator.pop(context);},),
+          InkWell(child: Icon(Icons.arrow_back_outlined, color: Colors.black,size: 22,), onTap: () {Navigator.pop(context);},),
           const SizedBox(height: 20.0,),
           RichText(text: const TextSpan(
               children: [
@@ -61,76 +62,32 @@ class _CreateAccountThreeScreenPageState extends State<CreateAccountThreeScreenP
               ]
           )),
           const SizedBox(height: 20.0,),
-          const Text("Upload Photo", style: TextStyle(fontWeight: FontWeight.w500, fontSize: 25.0, color: AppCustomColors.textDarkColor),),
+          const Text("Upload Photo", style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18.0, color: AppCustomColors.textDarkColor),),
           const SizedBox(height: 10.0,),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Container(
-                height: 48,
-                width: 48,
-                decoration: BoxDecoration(
-                    border: Border.all(width: 1.0, color: AppCustomColors.dividerColor),
-                    borderRadius: BorderRadius.circular(50.0)
-                ),
-                child: const Icon(Icons.add,color: AppCustomColors.textLightColor,),
+              CircleAvatar(
+                  radius: 30.0,
+                  backgroundColor: Color(0xffDFDADA),
+                  child: CircleAvatar(
+                    radius: 28.0,
+                    child: Icon(Icons.add,color: colortitle,size: 40.0,),backgroundColor: Colors.white,
+                  )
               ),
-              Container(
-                height: 48,
-                width: 48,
-                decoration: BoxDecoration(
-                    border: Border.all(width: 1.0, color: AppCustomColors.dividerColor),
-                    borderRadius: BorderRadius.circular(50.0),
-                    color: AppCustomColors.lightCreamBlue
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Image.asset("images/man.png"),
-                ),
-              ),
-              Container(
-                height: 48,
-                width: 48,
-                decoration: BoxDecoration(
-                    border: Border.all(width: 1.0, color: AppCustomColors.dividerColor),
-                    borderRadius: BorderRadius.circular(50.0),
-                    color: AppCustomColors.dialogBorderColor
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Image.asset("images/woman.png"),
-                ),
-              ),
-              Container(
-                height: 48,
-                width: 48,
-                decoration: BoxDecoration(
-                    border: Border.all(width: 1.0, color: AppCustomColors.dividerColor),
-                    borderRadius: BorderRadius.circular(50.0),
-                    color: AppCustomColors.lightCreamBlue
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Image.asset("images/man.png"),
-                ),
-              ),
-              Container(
-                height: 48,
-                width: 48,
-                decoration: BoxDecoration(
-                    border: Border.all(width: 1.0, color: AppCustomColors.dividerColor),
-                    borderRadius: BorderRadius.circular(50.0),
-                    color: AppCustomColors.dialogBorderColor
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Image.asset("images/woman.png"),
-                ),
-              ),
+              SizedBox(width: 5.0,),
+              CircleAvatar(radius: 30.0,backgroundImage: AssetImage("images/avater_one.png"),),
+              SizedBox(width: 5.0,),
+              CircleAvatar(radius: 30.0,backgroundImage: AssetImage("images/avater_two.png"),),
+              SizedBox(width: 5.0,),
+              CircleAvatar(radius: 30.0,backgroundImage: AssetImage("images/avater_three.png"),),
+              SizedBox(width: 5.0,),
+              CircleAvatar(radius: 30.0,backgroundImage: AssetImage("images/avater_four.png"),),
+              SizedBox(width: 5.0,),
             ],
           ),
           const SizedBox(height: 20.0,),
-          const Text("Address", style: TextStyle(fontWeight: FontWeight.w500, fontSize: 25.0, color: AppCustomColors.textDarkColor),),
+          const Text("Address", style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18.0, color: AppCustomColors.textDarkColor),),
           const SizedBox(height: 15.0,),
           TextField(
             decoration: InputDecoration(
@@ -138,10 +95,10 @@ class _CreateAccountThreeScreenPageState extends State<CreateAccountThreeScreenP
               labelStyle: const TextStyle(letterSpacing: 1, fontSize: 12.0, fontWeight: FontWeight.w500, color: Colors.black38),
               fillColor: Colors.white,
               filled: true,
-              focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.dividerColor)),
-              enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.dividerColor)),
+              focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.inputBorderColor)),
+              enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.inputBorderColor)),
             ),
-            style: TextStyle(fontWeight: FontWeight.w500,fontSize: 12.0),
+            style: TextStyle(fontWeight: FontWeight.w500,fontSize: 15.0),
           ),
           const SizedBox(height: 10.0,),
           TextField(
@@ -150,10 +107,10 @@ class _CreateAccountThreeScreenPageState extends State<CreateAccountThreeScreenP
               labelStyle: const TextStyle(letterSpacing: 1, fontSize: 12.0, fontWeight: FontWeight.w500, color: Colors.black38),
               fillColor: Colors.white,
               filled: true,
-              focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.dividerColor)),
-              enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.dividerColor)),
+              focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.inputBorderColor)),
+              enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.inputBorderColor)),
             ),
-            style: TextStyle(fontWeight: FontWeight.w500,fontSize: 12.0),
+            style: TextStyle(fontWeight: FontWeight.w500,fontSize: 15.0),
           ),
           const SizedBox(height: 10.0,),
           TextField(
@@ -162,10 +119,10 @@ class _CreateAccountThreeScreenPageState extends State<CreateAccountThreeScreenP
               labelStyle: const TextStyle(letterSpacing: 1, fontSize: 12.0, fontWeight: FontWeight.w500, color: Colors.black38),
               fillColor: Colors.white,
               filled: true,
-              focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.dividerColor)),
-              enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.dividerColor)),
+              focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.inputBorderColor)),
+              enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.inputBorderColor)),
             ),
-            style: TextStyle(fontWeight: FontWeight.w500,fontSize: 12.0),
+            style: TextStyle(fontWeight: FontWeight.w500,fontSize: 15.0),
           ),
           const SizedBox(height: 10.0,),
           Row(
@@ -177,13 +134,13 @@ class _CreateAccountThreeScreenPageState extends State<CreateAccountThreeScreenP
                   controller: countryController,
                   decoration: InputDecoration(
                     labelText: "COUNTRY",
-                    labelStyle: const TextStyle(letterSpacing: 1, fontSize: 12.0, fontWeight: FontWeight.w500, color: Colors.black38),
+                    labelStyle: const TextStyle(letterSpacing: 1, fontSize: 13.0, fontWeight: FontWeight.w500, color: Colors.black38),
                     fillColor: Colors.white,
                     filled: true,
-                    focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.dividerColor)),
-                    enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.dividerColor)),
+                    focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.inputBorderColor)),
+                    enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.inputBorderColor)),
                   ),
-                  style: TextStyle(fontWeight: FontWeight.w500,fontSize: 12.0),
+                  style: TextStyle(fontWeight: FontWeight.w500,fontSize: 15.0),
                 ),
               ),
               const SizedBox(width: 10.0,),
@@ -193,13 +150,13 @@ class _CreateAccountThreeScreenPageState extends State<CreateAccountThreeScreenP
                   controller: codeController,
                   decoration: InputDecoration(
                     labelText: "POSTAL CODE",
-                    labelStyle: const TextStyle(letterSpacing: 1, fontSize: 12.0, fontWeight: FontWeight.w500, color: Colors.black38),
+                    labelStyle: const TextStyle(letterSpacing: 1, fontSize: 13.0, fontWeight: FontWeight.w500, color: Colors.black38),
                     fillColor: Colors.white,
                     filled: true,
-                    focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.dividerColor)),
-                    enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.dividerColor)),
+                    focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.inputBorderColor)),
+                    enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.inputBorderColor)),
                   ),
-                  style: TextStyle(fontWeight: FontWeight.w500,fontSize: 12.0),
+                  style: TextStyle(fontWeight: FontWeight.w500,fontSize: 15.0),
                 ),
               ),
             ],

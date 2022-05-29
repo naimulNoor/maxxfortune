@@ -50,20 +50,20 @@ class _LoginPageViewState extends State<RegistrationTwoPage> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          InkWell(child: Icon(Icons.arrow_back, color: Colors.black,size: 36,), onTap: () {Navigator.pop(context);},),
+          InkWell(child: Icon(Icons.arrow_back_outlined, color: Colors.black,size: 22,), onTap: () {Navigator.pop(context);},),
           const SizedBox(height: 20.0,),
           RichText(text: const TextSpan(
               children: [
                 TextSpan(text: "STEP ", style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15.0, color: Colors.black38)),
-                TextSpan(text: "01", style: TextStyle(fontWeight: FontWeight.w900, fontSize: 15.0, color: AppCustomColors.textLightColor)),
+                TextSpan(text: "02", style: TextStyle(fontWeight: FontWeight.w900, fontSize: 15.0, color: AppCustomColors.textLightColor)),
                 TextSpan(text: "/03", style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15.0, color: Colors.black38)),
               ]
           )),
           const SizedBox(height: 15.0,),
           const Text("Check Your Email/Phone", style: TextStyle(fontWeight: FontWeight.w500, fontSize: 25.0, color: AppCustomColors.textDarkColor),),
           const SizedBox(height: 15.0,),
-          const Text("Collaboratively harness high-payoff methodologies via out-of-the-box vortals", style: TextStyle(fontWeight: FontWeight.w500, fontSize: 12.0, color: Colors.black38),),
-          const SizedBox(height: 15.0,),
+          const Text("Collaboratively harness high-payoff methodologies via out-of-the-box vortals", style: TextStyle(fontWeight: FontWeight.w500, fontSize: 14.0, color: Colors.black38),),
+          const SizedBox(height: 50.0,),
           WidgetInputOtpField(
             margin:EdgeInsets.symmetric(horizontal: 10.0),
           ),

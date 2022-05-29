@@ -41,7 +41,7 @@ class _CreateAccountOneScreenPageState
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          InkWell(child: Icon(Icons.arrow_back, color: Colors.black,size: 36,), onTap: () {Navigator.pop(context);},),
+          InkWell(child: Icon(Icons.arrow_back_outlined,size: 24, color: Colors.black,), onTap: () {Navigator.pop(context);},),
           const SizedBox(height: 20.0,),
           RichText(text: const TextSpan(
               children: [
@@ -51,32 +51,32 @@ class _CreateAccountOneScreenPageState
               ]
           )),
           const SizedBox(height: 15.0,),
-          const Text("Create Account", style: TextStyle(fontWeight: FontWeight.w500, fontSize: 25.0, color: AppCustomColors.textDarkColor),),
+          const Text("Create Account", style: TextStyle(fontWeight: FontWeight.w500, fontSize: 20.0, color: AppCustomColors.textDarkColor),),
           const SizedBox(height: 15.0,),
-          const Text("Collaboratively harness high-payoff methodologies via out-of-the-box vortals", style: TextStyle(fontWeight: FontWeight.w500, fontSize: 12.0, color: Colors.black38),),
+          const Text("Collaboratively harness high-payoff methodologies via out-of-the-box vortals", style: TextStyle(fontWeight: FontWeight.w500, fontSize: 14.0, color: Colors.black38),),
           const SizedBox(height: 15.0,),
           TextField(
             decoration: InputDecoration(
               hintText: "Enter Your Name",
-              hintStyle: TextStyle(fontWeight: FontWeight.w500, fontSize: 12.0,color: Colors.black38),
+              hintStyle: TextStyle(fontWeight: FontWeight.w500, fontSize: 15.0,color: Colors.black38),
               fillColor: Colors.white,
               filled: true,
-              focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.dividerColor)),
-              enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.dividerColor)),
+              focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.inputBorderColor)),
+              enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.inputBorderColor)),
             ),
-            style: TextStyle(fontWeight: FontWeight.w500,fontSize: 12.0),
+            style: TextStyle(fontWeight: FontWeight.w500,fontSize: 15.0),
           ),
           const SizedBox(height: 10.0,),
           TextField(
             decoration: InputDecoration(
               hintText: "Enter Your Email",
-              hintStyle: TextStyle(fontWeight: FontWeight.w500,fontSize: 12.0,color: Colors.black38),
+              hintStyle: TextStyle(fontWeight: FontWeight.w500,fontSize: 15.0,color: Colors.black38),
               fillColor: Colors.white,
               filled: true,
-              focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.dividerColor)),
-              enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.dividerColor)),
+              focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.inputBorderColor)),
+              enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.inputBorderColor)),
             ),
-            style: TextStyle(fontWeight: FontWeight.w500,fontSize: 12.0),
+            style: TextStyle(fontWeight: FontWeight.w500,fontSize: 15.0),
           ),
           const SizedBox(height: 10.0,),
           Container(
@@ -91,19 +91,21 @@ class _CreateAccountOneScreenPageState
                 CountryCodePicker(
                   enabled: false,
                   initialSelection: 'SG',
+                  textStyle: TextStyle(fontWeight: FontWeight.w500,fontSize: 15.0, color: Colors.black),
+                  flagWidth: 36.0,
                   showCountryOnly: false,
                   showOnlyCountryWhenClosed: false,
                   flagDecoration: BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(50.0))
                   ),
                 ),
-                const VerticalDivider(color: AppCustomColors.dividerColor,),
+                const VerticalDivider(color: AppCustomColors.inputBorderColor,),
                 const Expanded(
                   child: TextField(
                     decoration: InputDecoration(
                       border: InputBorder.none,
-                      hintText: "Phone",
-                      hintStyle: TextStyle(letterSpacing: 1, fontSize: 12.0, fontWeight: FontWeight.w500, color: Colors.black38),
+                      hintText: "PHONE NUMBER",
+                      hintStyle: TextStyle(letterSpacing: 1, fontSize: 15.0, fontWeight: FontWeight.w500, color: Colors.black38),
                     ),
                   ),
                 )
@@ -114,27 +116,27 @@ class _CreateAccountOneScreenPageState
           TextField(
             decoration: InputDecoration(
                 hintText: "PASSWORD",
-                hintStyle: const TextStyle(letterSpacing: 1, fontSize: 12.0, fontWeight: FontWeight.w500, color: Colors.black38),
+                hintStyle: const TextStyle(letterSpacing: 1, fontSize: 15.0, fontWeight: FontWeight.w500, color: Colors.black38),
                 fillColor: Colors.white,
                 filled: true,
-                focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.dividerColor)),
-                enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.dividerColor)),
+                focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.inputBorderColor)),
+                enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.inputBorderColor)),
                 suffixIcon: const Icon(Icons.remove_red_eye_outlined, color: Colors.black38,)
             ),
-            style: TextStyle(fontWeight: FontWeight.w500,fontSize: 12.0),
+            style: TextStyle(fontWeight: FontWeight.w500,fontSize: 15.0),
           ),
           const SizedBox(height: 10.0,),
           TextField(
             decoration: InputDecoration(
                 hintText: "CONFIRM PASSWORD",
-                hintStyle: const TextStyle(letterSpacing: 1, fontSize: 12.0, fontWeight: FontWeight.w500, color: Colors.black38),
+                hintStyle: const TextStyle(letterSpacing: 1, fontSize: 15.0, fontWeight: FontWeight.w500, color: Colors.black38),
                 fillColor: Colors.white,
                 filled: true,
-                focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.dividerColor)),
-                enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.dividerColor)),
+                focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.inputBorderColor)),
+                enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.inputBorderColor)),
                 suffixIcon: const Icon(Icons.remove_red_eye_outlined, color: Colors.black38,)
             ),
-            style: TextStyle(fontWeight: FontWeight.w500,fontSize: 12.0),
+            style: TextStyle(fontWeight: FontWeight.w500,fontSize: 15.0),
           ),
           const SizedBox(height: 40.0,),
           Padding(

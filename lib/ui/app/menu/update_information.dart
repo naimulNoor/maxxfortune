@@ -95,11 +95,11 @@ class _FaqViewState extends State<UpdateInformationPage> {
                         child: TextField(
                           decoration: InputDecoration(
                             hintText: "Name",
-                            hintStyle: TextStyle(fontWeight: FontWeight.w500,fontSize: 12.0,color: Colors.black38),
+                            hintStyle: TextStyle(fontWeight: FontWeight.w500,fontSize: 15.0,color: Colors.black38),
                             fillColor: Colors.white,
                             filled: true,
-                            focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.dividerColor)),
-                            enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.dividerColor)),
+                            focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.inputBorderColor)),
+                            enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.inputBorderColor)),
                           ),
                           style: TextStyle(fontWeight: FontWeight.w500,fontSize: 12.0),
                         ),
@@ -110,11 +110,11 @@ class _FaqViewState extends State<UpdateInformationPage> {
                         child: TextField(
                           decoration: InputDecoration(
                             hintText: "Email",
-                            hintStyle: TextStyle(fontWeight: FontWeight.w500,fontSize: 12.0,color: Colors.black38),
+                            hintStyle: TextStyle(fontWeight: FontWeight.w500,fontSize: 15.0,color: Colors.black38),
                             fillColor: Colors.white,
                             filled: true,
-                            focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.dividerColor)),
-                            enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.dividerColor)),
+                            focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.inputBorderColor)),
+                            enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: const BorderSide(color: AppCustomColors.inputBorderColor)),
                           ),
                           style: TextStyle(fontWeight: FontWeight.w500,fontSize: 12.0),
                         ),
@@ -126,7 +126,7 @@ class _FaqViewState extends State<UpdateInformationPage> {
                           height: 56,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(30.0),
-                              border: Border.all(width: 1.0, color: AppCustomColors.dividerColor),
+                              border: Border.all(width: 1.0, color: AppCustomColors.inputBorderColor),
                               color: Colors.white
                           ),
                           child: Row(
@@ -134,13 +134,14 @@ class _FaqViewState extends State<UpdateInformationPage> {
                               CountryCodePicker(
                                 enabled: false,
                                 initialSelection: 'SG',
+                                textStyle: TextStyle(fontWeight: FontWeight.w500,fontSize: 15.0,color: Colors.black),
                                 showCountryOnly: false,
                                 showOnlyCountryWhenClosed: false,
                                 flagDecoration: BoxDecoration(
                                     borderRadius: BorderRadius.all(Radius.circular(50.0))
                                 ),
                               ),
-                              const VerticalDivider(color: AppCustomColors.dividerColor,),
+                              const VerticalDivider(color: AppCustomColors.inputBorderColor,),
                               const Expanded(
                                 child: TextField(
                                   decoration: InputDecoration(
